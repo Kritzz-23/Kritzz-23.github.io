@@ -17,32 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Theme Toggle (Pristine Light Theme Default)
+   1. Theme Enforcement (Pristine Light Theme)
    ========================================================================== */
 function initThemeToggle() {
-  const toggleBtn = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
   const html = document.documentElement;
-
-  const savedTheme = localStorage.getItem('kg-theme') || 'light';
-  html.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const currentTheme = html.getAttribute('data-theme') || 'light';
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('kg-theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
-  }
-
-  function updateThemeIcon(theme) {
-    if (themeIcon) {
-      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-  }
+  html.setAttribute('data-theme', 'light');
+  try {
+    localStorage.removeItem('kg-theme');
+    localStorage.setItem('kg-theme', 'light');
+  } catch (e) {}
 }
 
 /* ==========================================================================
