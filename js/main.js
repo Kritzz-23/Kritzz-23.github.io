@@ -683,6 +683,10 @@ function initProjects() {
             <button class="btn btn-primary btn-sm open-project-modal-btn" data-project-id="${proj.id}">
               Deep Dive & Arch ↗
             </button>
+            ${proj.demoUrl && proj.demoUrl !== proj.githubUrl ? `
+            <a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #10b981, #06b6d4); border: none; font-weight: 600;">
+              Live App 🚀
+            </a>` : ''}
             <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
               View Repository ⚡
             </a>
@@ -740,8 +744,12 @@ function openProjectDetailModal(projectId) {
       ${proj.metrics.map(m => `<li>${m}</li>`).join('')}
     </ul>
 
-    <div style="display: flex; gap: 14px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
-      <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+    <div style="display: flex; gap: 14px; padding-top: 16px; border-top: 1px solid var(--border-subtle); flex-wrap: wrap;">
+      ${proj.demoUrl && proj.demoUrl !== proj.githubUrl ? `
+      <a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #10b981, #06b6d4); border: none; font-weight: 600;">
+        Launch Live Application 🚀
+      </a>` : ''}
+      <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
         Open Repository on GitHub
       </a>
       <button class="btn btn-secondary btn-sm close-modal-btn">Close</button>

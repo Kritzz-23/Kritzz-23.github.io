@@ -99,7 +99,7 @@ const PORTFOLIO_DATA = {
       image: "assets/images/project-cloudmetrics.jpg",
       description: "AI-powered incident intelligence platform that ingests server logs, clusters error traces, and surfaces actionable diagnostic insights for accelerated engineering triage.",
       stack: ["Python", "Log Analytics", "Anomaly Detection", "Docker", "REST API"],
-      demoUrl: "https://github.com/Kritzz-23/SentinelAI",
+      demoUrl: "https://kritzz-23.github.io/SentinelAI/",
       githubUrl: "https://github.com/Kritzz-23/SentinelAI",
       overview: "Engineered to drastically cut Mean Time to Resolution (MTTR) in distributed server clusters. It correlates high-frequency error traces, filters ambient log noise, and highlights anomalous failure paths.",
       architecture: "Streamlined log ingestion pipeline with rule-based filters and clustering algorithms designed for low-latency operational telemetry.",
