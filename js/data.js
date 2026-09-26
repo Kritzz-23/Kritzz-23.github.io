@@ -3,7 +3,7 @@
  * Centralized data for projects, skills, NLP playground, and architecture pipelines
  */
 
-const PORTFOLIO_DATA = {
+var PORTFOLIO_DATA = {
   profile: {
     name: "Kritika Giri",
     role: "Full Stack Developer",
@@ -440,6 +440,17 @@ class ExpenseLedger {
         "Built RESTful microservice architectures utilizing FastAPI, Node.js, and SQL.",
         "Maintained strict Git hygiene, CI/CD automated deployment pipelines, and semantic versioning."
       ]
+    },
+    {
+      role: "Higher Secondary Certificate (Science Stream — PCM)",
+      company: "Senior Secondary Education",
+      period: "Completed",
+      location: "India",
+      description: "Solid foundational background in Mathematics, Physics, Chemistry, and Computer Science with analytical problem-solving focus.",
+      achievements: [
+        "Focused study in Advanced Mathematics and Computational Logic.",
+        "Developed early interest in algorithms, scripting, and software development."
+      ]
     }
   ],
 
@@ -492,3 +503,9 @@ echo "Portfolio: https://kritzz-23.github.io/"
 echo "Available for Summer 2025/2026 roles & collaborations."`
   }
 };
+
+// Explicit global assignment for browser compatibility
+if (typeof window !== 'undefined') {
+  window.PORTFOLIO_DATA = PORTFOLIO_DATA;
+}
+
