@@ -6,22 +6,22 @@
 const PORTFOLIO_DATA = {
   profile: {
     name: "Kritika Giri",
-    role: "Applied AI & Full Stack Software Engineer",
-    tagline: "Engineering intelligent NLP systems, distributed architectures, and modern web products.",
+    role: "Full Stack Developer",
+    tagline: "Building resilient full-stack web applications, scalable backend APIs, and modern digital experiences.",
     email: "girikritika30@gmail.com",
     githubUsername: "Kritzz-23",
     githubUrl: "https://github.com/Kritzz-23",
     linkedinUrl: "https://www.linkedin.com/in/kritika-giri-2320aa345/",
     location: "Kolkata, India",
-    educationBrief: "3rd-Year AIML · Brainware University (CGPA 8.54)",
+    educationBrief: "Computer Science & Engineering · Brainware University (CGPA 8.54)",
     timezone: "IST (UTC+5:30)",
-    status: "Open for High-Impact Engineering Roles & Collaborations",
+    status: "Open for Full-Time Roles, Internships & High-Impact Contracts",
     typewriterRoles: [
-      "Applied AI & Full Stack Engineer",
-      "NLP Transformer Systems Specialist",
-      "Python, FastAPI & Microservices",
-      "Modern Web Applications Craftsman",
-      "Open Source Contributor"
+      "Full Stack Developer",
+      "Full Stack Software Engineer",
+      "React & Python Web Specialist",
+      "Backend & Scalable API Architect",
+      "Modern Web Applications Craftsman"
     ]
   },
 
