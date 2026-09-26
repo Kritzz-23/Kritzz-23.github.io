@@ -65,6 +65,31 @@ const PORTFOLIO_DATA = {
       githubUrl: "https://github.com/Kritzz-23/ai-contract-risk-analyzer",
       overview: "Traditional contract review is sluggish and prone to human oversight. This tool ingests commercial agreements, executes sentence-level tokenization, classifies clauses into 15+ liability categories, and highlights high-risk phrasing with automated remediation advice.",
       architecture: "Engineered with a Python NLP processing pipeline utilizing contextual token classification, clause similarity clustering, and interactive web visualization.",
+      codeSnippet: `// Contract Risk Analyzer — Multi-Head Clause Classifier
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+
+class ContractRiskPipeline:
+    def __init__(self, model_checkpoint: str = "legal-roberta-base"):
+        self.tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+        self.classifier = AutoModelForSequenceClassification.from_pretrained(model_checkpoint)
+        self.liability_labels = ["INDEMNITY", "NON_COMPETE", "WARRANTY", "TERMINATION", "IP_RESTRICTION"]
+
+    def analyze_clause(self, clause_text: str) -> dict:
+        inputs = self.tokenizer(clause_text, return_tensors="pt", truncation=True, max_length=512)
+        with torch.no_grad():
+            logits = self.classifier(**inputs).logits
+            probabilities = torch.softmax(logits, dim=-1).squeeze().tolist()
+            
+        top_category_idx = int(torch.argmax(logits))
+        risk_score = int(probabilities[top_category_idx] * 100)
+        
+        return {
+            "category": self.liability_labels[top_category_idx],
+            "risk_score": risk_score,
+            "status": "classified",
+            "model_version": "v1.4.2"
+        }`,
       metrics: [
         "Accelerates document legal review by over 60%",
         "Contextual risk classification across 15+ liability dimensions",
@@ -84,6 +109,26 @@ const PORTFOLIO_DATA = {
       githubUrl: "https://github.com/Kritzz-23/InternIntel-AI",
       overview: "Bridges the technical student-to-internship gap by intelligently organizing internship postings, scoring applicant skill profiles against role expectations, and organizing application lifecycles.",
       architecture: "Relational database backend coupled with automated semantic extraction algorithms that score applicant compatibility against real-time job specifications.",
+      codeSnippet: `// InternIntel — Real-time Semantic Compatibility Scorer
+export async function calculateCandidateFit(studentSkills, jobRequirements) {
+  const normalizedStudent = new Set(studentSkills.map(s => s.toLowerCase().trim()));
+  const matched = [];
+  const missing = [];
+
+  for (const req of jobRequirements) {
+    if (normalizedStudent.has(req.name.toLowerCase().trim())) {
+      matched.push({ skill: req.name, weight: req.weight || 1.0 });
+    } else {
+      missing.push(req.name);
+    }
+  }
+
+  const earnedWeight = matched.reduce((sum, item) => sum + item.weight, 0);
+  const totalWeight = jobRequirements.reduce((sum, item) => sum + (item.weight || 1.0), 0);
+  const score = Math.round((earnedWeight / (totalWeight || 1)) * 100);
+
+  return { fitPercentage: score, matchedSkills: matched, missingSkills: missing };
+}`,
       metrics: [
         "Tracks hundreds of opportunities with automated status updates",
         "Semantic keyword matching yielding instant compatibility scores",
@@ -103,6 +148,40 @@ const PORTFOLIO_DATA = {
       githubUrl: "https://github.com/Kritzz-23/SentinelAI",
       overview: "Engineered to drastically cut Mean Time to Resolution (MTTR) in distributed server clusters. It correlates high-frequency error traces, filters ambient log noise, and highlights anomalous failure paths.",
       architecture: "Streamlined log ingestion pipeline with rule-based filters and clustering algorithms designed for low-latency operational telemetry.",
+      codeSnippet: `# SentinelAI — Async Error Trace Ingestion & Clustering Engine
+from fastapi import FastAPI, BackgroundTasks, HTTPException
+from pydantic import BaseModel
+import asyncio, time
+
+app = FastAPI(title="SentinelAI Triage Engine", version="2.4.0")
+
+class IncidentPayload(BaseModel):
+    service_id: str
+    log_level: str
+    traceback: str
+    timestamp_ns: int
+
+@app.post("/api/v1/triage/ingest")
+async def ingest_incident(incident: IncidentPayload, bg: BackgroundTasks):
+    t_start = time.perf_counter()
+    
+    # 1. Strip dynamic variables and compute structural error hash
+    signature = cluster_traceback_signature(incident.traceback)
+    
+    # 2. Asynchronous anomaly scoring and deduplication
+    is_anomaly, confidence = await anomaly_engine.score_async(signature)
+    
+    # 3. Schedule non-blocking alert dispatch if P1 priority
+    if is_anomaly and confidence > 0.88:
+        bg.add_task(dispatch_pager_alert, incident.service_id, signature)
+        
+    duration_ms = (time.perf_counter() - t_start) * 1000
+    return {
+        "status": "triaged",
+        "cluster_id": signature[:12],
+        "latency_ms": round(duration_ms, 2),
+        "deduplicated": not is_anomaly
+    }`,
       metrics: [
         "Reduces debugging MTTR by identifying recurrent anomaly clusters",
         "Suppresses up to 80% of repetitive ambient log noise",
@@ -122,6 +201,39 @@ const PORTFOLIO_DATA = {
       githubUrl: "https://github.com/Kritzz-23/expense-tracker",
       overview: "A clean, modern financial dashboard providing individuals with immediate visibility into their spending patterns, recurring obligations, and monthly savings goals.",
       architecture: "Engineered with modular ES6 JavaScript, persistent local storage synchronization, and dynamic DOM updates with zero external bundle bloat.",
+      codeSnippet: `// Smart Expense Tracker — Persistent Transaction Ledger Engine
+class ExpenseLedger {
+  constructor(storageKey = "kg_expenses_v2") {
+    this.storageKey = storageKey;
+    this.transactions = this.loadLedger();
+  }
+
+  addTransaction({ description, amount, category, date }) {
+    const record = {
+      id: crypto.randomUUID(),
+      description: description.trim(),
+      amount: parseFloat(amount),
+      category,
+      date: date || new Date().toISOString().split('T')[0],
+      createdAt: Date.now()
+    };
+    this.transactions.unshift(record);
+    this.persist();
+    return record;
+  }
+
+  getSummary() {
+    return this.transactions.reduce((acc, curr) => {
+      acc.total += curr.amount;
+      acc.byCategory[curr.category] = (acc.byCategory[curr.category] || 0) + curr.amount;
+      return acc;
+    }, { total: 0, byCategory: {} });
+  }
+
+  persist() {
+    localStorage.setItem(this.storageKey, JSON.stringify(this.transactions));
+  }
+}`,
       metrics: [
         "100% offline-ready with instant persistent data retrieval",
         "Sub-10ms UI interaction latency",
@@ -165,6 +277,107 @@ const PORTFOLIO_DATA = {
       }
     }
   },
+
+  // Architecture Pipeline Simulator Scenarios
+  simulationPresets: [
+    {
+      id: "sentinel-p1",
+      name: "SentinelAI: P1 Database Pool Exhaustion",
+      badge: "P1 Incident",
+      endpoint: "POST /api/v1/telemetry/triage",
+      clientPayload: {
+        event: "DB_CONNECTION_LIMIT_EXCEEDED",
+        service: "payment-gateway-us-east",
+        active_connections: 500,
+        max_connections: 500,
+        unhandled_exceptions_sec: 142
+      },
+      stages: [
+        { name: "Client / Ingest Agent", latency: "8ms", status: "Event serialized & dispatched via HTTPS" },
+        { name: "FastAPI Gateway", latency: "14ms", status: "Token auth verified; rate limit checked (0/1000/s)" },
+        { name: "ML Anomaly Classifier", latency: "38ms", status: "Clustered with historical signature #PG-ERR-08; confidence 98.4%" },
+        { name: "PostgreSQL & Alert Dispatch", latency: "12ms", status: "Incident recorded in ledger; dispatched P1 PagerDuty alert" }
+      ],
+      totalLatency: "72ms",
+      responsePayload: {
+        incident_id: "INC-2026-8821",
+        status: "TRIAGED_ESCALATED",
+        severity: "P1_CRITICAL",
+        root_cause_prediction: "PostgreSQL pg_stat_activity connection pool saturation caused by unclosed cursor in /v2/checkout",
+        recommended_remediation: "Execute failover to read-replica pool & run kill_idle_connections()",
+        confidence: 0.984,
+        triage_duration_ms: 72
+      }
+    },
+    {
+      id: "contract-nlp",
+      name: "Contract NLP: Uncapped Indemnity Clause",
+      badge: "NLP Evaluation",
+      endpoint: "POST /api/v1/nlp/contract-risk/analyze",
+      clientPayload: {
+        document_id: "DOC-MSA-2026-44",
+        clause_span: "Vendor agrees to indemnify and hold harmless Client from any and all damages without limitation...",
+        jurisdiction: "Delaware, USA"
+      },
+      stages: [
+        { name: "Client / Webhook", latency: "11ms", status: "Document text uploaded & normalized" },
+        { name: "FastAPI Edge Gateway", latency: "9ms", status: "Payload validated via Pydantic schema" },
+        { name: "Legal Transformer Engine", latency: "46ms", status: "Multi-head attention classified clause into INDEMNITY_UNLIMITED" },
+        { name: "Persistence & Runbook", latency: "15ms", status: "Calculated risk score 94/100 & retrieved standard remediation text" }
+      ],
+      totalLatency: "81ms",
+      responsePayload: {
+        analysis_id: "NLP-RISK-90412",
+        classification: "INDEMNIFICATION_UNLIMITED",
+        risk_score: 94,
+        risk_level: "CRITICAL",
+        flagged_tokens: ["without limitation", "any and all damages"],
+        suggested_counter_clause: "Cap liability to aggregate fees paid in past 12 months; exclude consequential damages.",
+        total_pipeline_time_ms: 81
+      }
+    },
+    {
+      id: "internintel-match",
+      name: "InternIntel: Semantic Compatibility Triage",
+      badge: "Semantic Match",
+      endpoint: "POST /api/v1/matching/candidate-fit",
+      clientPayload: {
+        candidate_skills: ["Python", "FastAPI", "React", "PostgreSQL", "Docker"],
+        target_role: "Full Stack Engineer Intern",
+        required_competencies: ["Python", "FastAPI", "React", "SQL"]
+      },
+      stages: [
+        { name: "Candidate Portal", latency: "6ms", status: "Applicant skill profile submitted" },
+        { name: "FastAPI Service", latency: "12ms", status: "JWT session authenticated & verified" },
+        { name: "Semantic Match Engine", latency: "22ms", status: "Evaluated 5/5 mandatory competencies; calculated 96% fit" },
+        { name: "Database & Notification", latency: "11ms", status: "Candidate queued for technical interview triage" }
+      ],
+      totalLatency: "51ms",
+      responsePayload: {
+        match_id: "MATCH-8831",
+        compatibility_score: 96,
+        status: "STRONG_MATCH",
+        matched_stack: ["Python", "FastAPI", "React", "PostgreSQL"],
+        bonus_points: ["Docker containerization", "B.Tech Final Year (CGPA 8.54)"],
+        next_step: "Immediate Automated Technical Interview Scheduling"
+      }
+    }
+  ],
+
+  // Command Palette Items
+  commands: [
+    { id: "sentinel-live", title: "Launch SentinelAI Live Application", category: "Quick Launch", icon: "🚀", action: "url", url: "https://kritzz-23.github.io/SentinelAI/" },
+    { id: "jump-architecture", title: "System Architecture & Request Simulator", category: "Navigation", icon: "⚡", action: "scroll", target: "#architecture" },
+    { id: "jump-projects", title: "View Shipped Projects & Applications", category: "Navigation", icon: "📂", action: "scroll", target: "#projects" },
+    { id: "jump-nlp", title: "Live NLP Contract Risk Playground", category: "Navigation", icon: "📑", action: "scroll", target: "#nlp-demo" },
+    { id: "jump-skills", title: "Technical Skills & Stack Matrix", category: "Navigation", icon: "💻", action: "scroll", target: "#skills" },
+    { id: "jump-about", title: "About Me & Engineering Philosophy", category: "Navigation", icon: "👤", action: "scroll", target: "#about" },
+    { id: "jump-education", title: "Academic Background & Brainware University", category: "Navigation", icon: "🎓", action: "scroll", target: "#education" },
+    { id: "jump-contact", title: "Get in Touch & Send Message", category: "Navigation", icon: "✉️", action: "scroll", target: "#contact" },
+    { id: "copy-email", title: "Copy Email: girikritika30@gmail.com", category: "Quick Action", icon: "📋", action: "copy_email" },
+    { id: "open-github", title: "Open GitHub Profile (@Kritzz-23)", category: "Quick Launch", icon: "🐙", action: "url", url: "https://github.com/Kritzz-23" },
+    { id: "open-linkedin", title: "Open LinkedIn Profile", category: "Quick Launch", icon: "💼", action: "url", url: "https://www.linkedin.com/in/kritika-giri-2320aa345/" }
+  ],
 
   // Interactive Architecture Pipeline Nodes
   architecturePipeline: [

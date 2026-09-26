@@ -42,6 +42,7 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
           <li><a href="#nlp-demo" class="nav-link">Live NLP Demo</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
@@ -51,6 +52,10 @@
 
       <!-- Header Actions -->
       <div class="header-actions">
+        <button class="cmd-trigger-btn" id="cmd-palette-btn" aria-label="Open Command Palette" title="Command Palette (Ctrl + K)">
+          <span class="cmd-kbd">⌘K</span>
+          <span class="cmd-label">Quick Actions</span>
+        </button>
         <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation">
           <span></span>
@@ -71,7 +76,9 @@
         <div class="hero-text-content">
           <div class="hero-status-pill">
             <span class="status-dot"></span>
-            <span>4th-Year Undergraduate &bull; Brainware University (CGPA 8.54) &bull; Kolkata</span>
+            <span id="hero-live-time" style="font-family: var(--font-mono); font-size: 0.78rem;">Kolkata, IN: 16:58 IST</span>
+            <span style="opacity: 0.4;">&bull;</span>
+            <span>4th-Year Undergraduate &bull; Brainware University (CGPA 8.54)</span>
           </div>
 
           <h1 class="hero-name">Kritika Giri</h1>
@@ -286,9 +293,68 @@
   </section>
 
   <!-- ========================================================================
+       ARCHITECTURE SIMULATOR: Advanced Distributed Telemetry & System Flow
+       ======================================================================== -->
+  <section class="section section-alt" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Live System Architecture</span>
+        <h2 class="section-title">Request Pipeline &amp; Telemetry Simulator</h2>
+        <p class="section-description">
+          Trace how an operational telemetry event or legal NLP contract flows through the distributed system architecture — from client edge to NLP inference and relational persistence.
+        </p>
+      </div>
+
+      <div class="arch-card">
+        <!-- Presets Bar -->
+        <div class="arch-controls-header">
+          <div class="arch-presets-label">
+            <span style="font-weight: 600; color: var(--text-main);">Simulation Scenario:</span>
+            <span style="font-size: 0.84rem; color: var(--text-muted);">(Select failure event or ingress workflow)</span>
+          </div>
+          <div class="arch-presets-group" id="arch-presets-group">
+            <!-- Injected dynamically -->
+          </div>
+          <button class="btn btn-primary btn-sm" id="run-arch-sim-btn">
+            Simulate Request Flow ⚡
+          </button>
+        </div>
+
+        <!-- 4-Stage Visual Horizontal Flow -->
+        <div class="pipeline-track-wrapper">
+          <div class="pipeline-stages-flow" id="pipeline-stages-flow">
+            <!-- 4 Stages injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Telemetry Inspection Grid -->
+        <div class="arch-telemetry-grid">
+          <!-- Left: Ingress Payload Inspector -->
+          <div class="telemetry-deck">
+            <div class="telemetry-deck-header">
+              <span class="telemetry-badge">HTTP INGRESS PAYLOAD</span>
+              <span class="telemetry-route" id="sim-endpoint-label">POST /api/v1/telemetry/triage</span>
+            </div>
+            <pre class="telemetry-pre"><code id="sim-req-code">{ "status": "Ready for execution..." }</code></pre>
+          </div>
+
+          <!-- Right: Processed Output & Remediations -->
+          <div class="telemetry-deck">
+            <div class="telemetry-deck-header">
+              <span class="telemetry-badge" style="background: var(--success-light); color: var(--success-color);">PROCESSED SYSTEM RESPONSE</span>
+              <span class="telemetry-latency-pill" id="sim-latency-pill">Latency: -- ms</span>
+            </div>
+            <pre class="telemetry-pre"><code id="sim-res-code">{ "status": "Ready. Click 'Simulate Request Flow' above." }</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
        LIVE PLAYGROUND: NLP Contract Risk Analyzer
        ======================================================================== -->
-  <section class="section section-alt" id="nlp-demo">
+  <section class="section" id="nlp-demo">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Live System Playground</span>
@@ -373,12 +439,20 @@
         </p>
       </div>
 
-      <!-- Skills Category Tabs -->
-      <div class="skills-category-tabs">
-        <button class="skill-tab-btn active" data-skill-cat="all">All Skills</button>
-        <button class="skill-tab-btn" data-skill-cat="backend">Backend &amp; AI</button>
-        <button class="skill-tab-btn" data-skill-cat="frontend">Frontend &amp; UI</button>
-        <button class="skill-tab-btn" data-skill-cat="devops">DevOps &amp; Databases</button>
+      <!-- Skills Search and Filter Toolbar -->
+      <div class="skills-filter-toolbar">
+        <div class="skills-category-tabs">
+          <button class="skill-tab-btn active" data-skill-cat="all">All Skills</button>
+          <button class="skill-tab-btn" data-skill-cat="backend">Backend &amp; AI</button>
+          <button class="skill-tab-btn" data-skill-cat="frontend">Frontend &amp; UI</button>
+          <button class="skill-tab-btn" data-skill-cat="devops">DevOps &amp; Databases</button>
+        </div>
+
+        <div class="skills-search-box">
+          <span class="skills-search-icon">🔍</span>
+          <input type="text" id="skills-search-input" class="skills-search-input" placeholder="Search skill or framework (e.g. Python, React, SQL, Docker)..." aria-label="Search technical skills">
+          <span class="skills-count-pill" id="skills-count-pill">11 Skills</span>
+        </div>
       </div>
 
       <!-- Skills Grid (Rendered by js/main.js) -->
@@ -490,6 +564,8 @@
         <span>&copy; 2026 Kritika Giri &bull; Full Stack Developer</span>
         <span style="margin: 0 8px; color: var(--border-medium);">|</span>
         <span>Brainware University, Kolkata (CGPA 8.54)</span>
+        <span style="margin: 0 8px; color: var(--border-medium);">|</span>
+        <span id="footer-live-time" style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-secondary);">Kolkata, IN: 16:58 IST</span>
       </div>
       <div class="footer-links">
         <a href="#hero">Back to Top ↑</a>
@@ -499,6 +575,30 @@
       </div>
     </div>
   </footer>
+
+  <!-- Command Palette Modal (Linear / Raycast Style) -->
+  <div class="cmd-overlay" id="cmd-palette-modal" aria-hidden="true">
+    <div class="cmd-dialog" role="dialog" aria-modal="true" aria-label="Command Menu">
+      <div class="cmd-search-bar">
+        <span class="cmd-search-icon">⚡</span>
+        <input type="text" id="cmd-input" class="cmd-input" placeholder="Search commands, sections, or actions (e.g. SentinelAI, skills)..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-esc-badge" id="cmd-esc-btn">ESC</kbd>
+      </div>
+      <div class="cmd-list" id="cmd-list">
+        <!-- Rendered dynamically by js/main.js -->
+      </div>
+      <div class="cmd-footer-bar">
+        <div class="cmd-shortcuts-guide">
+          <span><kbd class="cmd-sub-kbd">↑</kbd> <kbd class="cmd-sub-kbd">↓</kbd> Navigate</span>
+          <span><kbd class="cmd-sub-kbd">↵</kbd> Select</span>
+          <span><kbd class="cmd-sub-kbd">ESC</kbd> Dismiss</span>
+        </div>
+        <div style="font-size: 0.74rem; color: var(--text-muted);">
+          Kritika Giri &bull; Full Stack Engineer
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Project Detail Modal -->
   <div class="modal-overlay" id="project-modal" aria-hidden="true">

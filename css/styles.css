@@ -1484,4 +1484,548 @@ textarea.form-input {
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  .cmd-trigger-btn .cmd-label {
+    display: none;
+  }
 }
+
+/* ==========================================================================
+   ADVANCED FEATURES: Command Palette, Architecture Simulator & Live Tools
+   100% Crisp Light Theme System
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   A. Command Palette Trigger Button (Header)
+   -------------------------------------------------------------------------- */
+.cmd-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #F9FAFB;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.cmd-trigger-btn:hover {
+  background-color: #F3F4F6;
+  border-color: var(--border-medium);
+  color: var(--text-main);
+}
+
+.cmd-kbd {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  color: var(--text-main);
+}
+
+/* --------------------------------------------------------------------------
+   B. Command Palette Modal (Linear / Raycast Pure Light Dialog)
+   -------------------------------------------------------------------------- */
+.cmd-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(24, 24, 27, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 20px 20px;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.cmd-overlay.show {
+  display: flex;
+}
+
+.cmd-dialog {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl), 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 620px;
+  overflow: hidden;
+  animation: scaleUp 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cmd-search-bar {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: #FFFFFF;
+  gap: 12px;
+}
+
+.cmd-search-icon {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.cmd-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-main);
+  outline: none;
+  font-family: inherit;
+}
+
+.cmd-input::placeholder {
+  color: var(--text-dim);
+}
+
+.cmd-esc-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 6px;
+  background-color: #F3F4F6;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.cmd-list {
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.cmd-group-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  padding: 8px 12px 4px;
+}
+
+.cmd-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.cmd-item:hover,
+.cmd-item.active {
+  background-color: #F4F4F5;
+}
+
+.cmd-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cmd-item-icon {
+  font-size: 1.05rem;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmd-item-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.cmd-item-category {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 2px 8px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+}
+
+.cmd-footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: #F9FAFB;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cmd-shortcuts-guide {
+  display: flex;
+  gap: 12px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.cmd-sub-kbd {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 1px 4px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  color: var(--text-main);
+}
+
+/* --------------------------------------------------------------------------
+   C. System Architecture & Request Pipeline Simulator
+   -------------------------------------------------------------------------- */
+.arch-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+}
+
+.arch-controls-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.arch-presets-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.arch-presets-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.arch-preset-btn {
+  padding: 6px 14px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.arch-preset-btn:hover {
+  background-color: #F4F4F5;
+  color: var(--text-main);
+  border-color: var(--border-medium);
+}
+
+.arch-preset-btn.active {
+  background-color: #18181B;
+  color: #FFFFFF;
+  border-color: #18181B;
+}
+
+/* Pipeline Track (Horizontal 4 Stages) */
+.pipeline-track-wrapper {
+  background-color: #F9FAFB;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  position: relative;
+  overflow-x: auto;
+}
+
+.pipeline-stages-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  min-width: 720px;
+  position: relative;
+}
+
+.pipeline-stage-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-xs);
+}
+
+.pipeline-stage-card.stage-active {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.18), var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.pipeline-stage-card.stage-done {
+  border-color: #18181B;
+}
+
+.stage-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stage-step-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F3F4F6;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.pipeline-stage-card.stage-active .stage-step-badge {
+  background-color: var(--accent-secondary);
+  color: #FFFFFF;
+  border-color: var(--accent-secondary);
+}
+
+.stage-latency-pill {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: #F9FAFB;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+.stage-title {
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.stage-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Telemetry Ingress & Egress Inspection Grid */
+.arch-telemetry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.telemetry-deck {
+  background-color: #F9FAFB;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetry-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.telemetry-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  background-color: #F3F4F6;
+  border-radius: 4px;
+  color: var(--text-main);
+}
+
+.telemetry-route {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.telemetry-latency-pill {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--success-color);
+  background-color: var(--success-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.telemetry-pre {
+  margin: 0;
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: #F9FAFB;
+  max-height: 260px;
+  overflow: auto;
+}
+
+/* --------------------------------------------------------------------------
+   D. Skills Search & Filter Toolbar
+   -------------------------------------------------------------------------- */
+.skills-filter-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.skills-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.skills-search-box:focus-within {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.06);
+}
+
+.skills-search-icon {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.skills-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.86rem;
+  color: var(--text-main);
+  width: 100%;
+}
+
+.skills-search-input::placeholder {
+  color: var(--text-dim);
+}
+
+.skills-count-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background-color: #F3F4F6;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   E. Project Detail Modal Tabs
+   -------------------------------------------------------------------------- */
+.modal-nav-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin: 18px 0;
+  padding-bottom: 2px;
+}
+
+.modal-nav-tab {
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-nav-tab:hover {
+  color: var(--text-main);
+  background-color: #F9FAFB;
+}
+
+.modal-nav-tab.active {
+  color: var(--text-main);
+  border-bottom-color: #18181B;
+  font-weight: 700;
+}
+
+.modal-code-wrapper {
+  background-color: #F9FAFB;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin: 14px 0;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.modal-code-block {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+/* Responsive adjustments for telemetry grid */
+@media (max-width: 900px) {
+  .arch-telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-search-box {
+    max-width: 100%;
+  }
+}
+
