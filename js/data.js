@@ -204,7 +204,7 @@ const PORTFOLIO_DATA = {
     {
       role: "B.Tech in Artificial Intelligence & Machine Learning (AIML)",
       company: "Brainware University",
-      period: "2023 — Present (3rd Year)",
+      period: "Present (4th Year / Final Year)",
       location: "Kolkata, India",
       description: "Undergraduate degree focusing on Natural Language Processing, Machine Learning, Data Structures & Algorithms, and Distributed Web Engineering.",
       achievements: [
@@ -258,7 +258,7 @@ print(f"Status: Ready for high-impact roles (CGPA {engineer.cgpa})")`,
     "institution": "Brainware University",
     "degree": "B.Tech CSE (AI & ML)",
     "cgpa": "8.54 / 10",
-    "year": "3rd Year (Graduation 2027)"
+    "year": "4th Year / Final Year"
   },
   "core_competencies": {
     "languages": ["Python", "JavaScript (ES6+)", "SQL", "HTML5", "CSS3"],
