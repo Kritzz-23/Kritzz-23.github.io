@@ -1,166 +1,84 @@
-# ✨ Kritika Giri — Full Stack Developer Portfolio & GitHub Showcase
+# ✨ Kritika Giri — Full Stack & Applied AI Portfolio
 
-> A modern, responsive, high-performance portfolio website engineered for **GitHub Pages** hosting, featuring an interactive developer terminal, dynamic skills matrix, deep-dive project case studies, real-time GitHub activity hub, customizable themes, and built-in resume viewer.
+[![Portfolio Live](https://img.shields.io/badge/Live_Portfolio-https%3A%2F%2Fkritzz--23.github.io%2F-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://kritzz-23.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kritika-giri-2320aa345/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKritzz-23%2FKritzz-23.github.io)
 
----
-
-## 🌟 Live Features & Highlights
-
-- **⚡ Blazing Fast & Zero-Build**: Built with standard semantic HTML5, modern CSS3 variables & glassmorphism, and vanilla ES6+ JavaScript. No complex build tools or npm dependencies required—making it 100% plug-and-play for GitHub Pages.
-- **🎨 Interactive Theme & Accent Engine**:
-  - Light & Dark Obsidian mode toggling (with local storage persistence).
-  - 4 Dynamic Accent Palettes (Cyber Violet, Neon Cyan, Matrix Green, Sunset Amber).
-  - Ambient glowing mesh gradients with cursor spotlight tracking.
-- **💻 Interactive Developer Code Terminal**:
-  - Live tab switching between TypeScript code (`kritika.ts`), configuration (`stack.json`), and an interactive shell terminal.
-  - Interactive terminal emulator responding to commands like `help`, `skills`, `projects`, `about`, `contact`, `clear`, and `whoami`.
-- **🛠️ Dynamic Skills & Tech Stack Matrix**:
-  - Filterable by discipline (*Frontend*, *Backend & DB*, *DevOps & Cloud*).
-  - Instant live keyword search bar.
-- **🚀 Featured Projects Showcase**:
-  - Deep-dive architectural breakdown modals with system design notes, challenge/solution reviews, and key engineering metrics.
-  - Direct links to GitHub repositories and live deployments.
-- **📊 Real-Time GitHub Activity Hub**:
-  - Live GitHub Stats, Top Languages, and Streak trackers.
-  - Dynamic username switcher allowing instant preview for any GitHub username.
-- **📄 Built-in Printable Resume Modal**:
-  - Full CV layout styled for immediate viewing and 1-click printing/saving as PDF.
-- **✉️ Interactive Contact Form**:
-  - Instant field validation, tactile sound feedback (synthesized via Web Audio API), and 1-click email copy.
+> Production-grade developer portfolio featuring **4 live interactive web applications**, simulated JWT role-based authentication, interactive system architecture simulation, real-time Kolkata IST clock, and 1-Click Recruiter Demo Access.
 
 ---
 
-## 🚀 How to Deploy on GitHub Pages (In Under 2 Minutes)
+## ⚡ Live Working Applications Directory
 
-Follow these steps to host your portfolio for free with your custom GitHub URL:
+Every project is fully functional, deployed live on GitHub Pages with simulated JWT authentication and 1-Click Recruiter Demo Access:
 
-### Step 1: Create a GitHub Repository
-1. Navigate to [github.com/new](https://github.com/new).
-2. Set the repository name:
-   - For a standard site: `kritika-portfolio` (will be hosted at `https://<your-username>.github.io/kritika-portfolio/`)
-   - For your primary user site: `<your-username>.github.io` (will be hosted at `https://<your-username>.github.io/`)
-3. Set visibility to **Public**.
-4. Leave *Initialize with a README* unchecked (this repository already has one).
-
-### Step 2: Push Your Code
-Open PowerShell or your terminal inside this folder:
-```powershell
-# 1. Initialize git
-git init
-
-# 2. Add all files
-git add .
-
-# 3. Commit
-git commit -m "feat: initial release of personal portfolio"
-
-# 4. Set default branch to main
-git branch -M main
-
-# 5. Connect your remote repository (replace with your actual GitHub username)
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/kritika-portfolio.git
-
-# 6. Push
-git push -u origin main
-```
-
-### Step 3: Activate GitHub Pages
-1. Go to your repository on GitHub.
-2. Click **Settings** (top tab) &rarr; **Pages** (in the left sidebar under *Code and automation*).
-3. Under **Build and deployment**:
-   - **Source**: Select `Deploy from a branch`
-   - **Branch**: Select `main` and folder `/(root)`
-4. Click **Save**.
-5. Wait about 30–60 seconds, and GitHub will display your live portfolio URL!
+| Application | Interview Specialization | Live Working URL | GitHub Repository | 1-Click Demo Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **SentinelAI** | AI / SRE / Cloud DevOps | [Launch Live App 🚀](https://kritzz-23.github.io/SentinelAI/) | [Kritzz-23/SentinelAI](https://github.com/Kritzz-23/SentinelAI) | `SRE Lead / DevOps` |
+| **AI Contract Risk Analyzer** | NLP / Machine Learning / LegalTech | [Launch Live App 🚀](https://kritzz-23.github.io/ai-contract-risk-analyzer/) | [Kritzz-23/ai-contract-risk-analyzer](https://github.com/Kritzz-23/ai-contract-risk-analyzer) | `Corporate Legal Counsel` |
+| **InternIntel AI** | Full Stack / Semantic Matcher / ATS | [Launch Live App 🚀](https://kritzz-23.github.io/InternIntel-AI/) | [Kritzz-23/InternIntel-AI](https://github.com/Kritzz-23/InternIntel-AI) | `Student Candidate & Recruiter` |
+| **Smart Expense Tracker** | Frontend / Ledger / Analytics | [Launch Live App 🚀](https://kritzz-23.github.io/expense-tracker/) | [Kritzz-23/expense-tracker](https://github.com/Kritzz-23/expense-tracker) | `Personal Account Holder` |
+| **Master Portfolio** | Full-Stack Hub | [Launch Live Portfolio 🌐](https://kritzz-23.github.io/) | [Kritzz-23/Kritzz-23.github.io](https://github.com/Kritzz-23/Kritzz-23.github.io) | `Master Showcase Hub` |
 
 ---
 
-## 🎁 BONUS: Ready-to-Copy GitHub Profile README (`README.md`)
+## 💼 How to Add This Portfolio to LinkedIn
 
-If you want a matching README for your special GitHub Profile repository (`github.com/<your-username>/<your-username>`), copy the markdown below:
+To maximize recruiter impressions and showcase your work during interviews, add your portfolio across these 3 key sections on LinkedIn:
 
-```markdown
-# Hi there, I'm Kritika Giri 👋
+### 1. Add as Your Profile Intro Website Link (Header)
+1. Go to your **LinkedIn Profile** and click the **pencil icon ✏️** in your top intro card (next to your name).
+2. Scroll to the bottom to the **Custom Link / Website** section.
+3. In **Link**, paste: `https://kritzz-23.github.io/`
+4. In **Link text**, enter: `View Live Full-Stack & AI Portfolio 🚀`
+5. Click **Save**. Your live portfolio link will now appear right below your location and headline for every recruiter to see!
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KritikaGiri/kritika-portfolio/main/assets/images/avatar.jpg" width="180" height="180" style="border-radius: 50%;" alt="Kritika Giri" />
-</p>
+### 2. Feature on Your LinkedIn "Featured" Section
+1. On your profile page, scroll down to the **Featured** section (or click **Add profile section** &rarr; **Recommended** &rarr; **Add featured**).
+2. Click the **+** icon and select **Add a link**.
+3. Paste: `https://kritzz-23.github.io/`
+4. Fill in:
+   - **Title**: `Kritika Giri — Full Stack & Applied AI Portfolio`
+   - **Description**: `Interactive showcase featuring 4 live deployed web applications: SentinelAI (SRE Incident Triage), AI Contract Risk Analyzer (Legal NLP Classifier), InternIntel AI (Semantic Skill Matcher), and Smart Expense Tracker. Built with React, Python, FastAPI, and JWT role-based access.`
+5. Click **Save**. LinkedIn will automatically pull the high-resolution OpenGraph preview card!
 
-<p align="center">
-  <strong>Full Stack Developer & Software Engineer</strong><br>
-  <em>Building resilient distributed web systems, scalable APIs, and modern digital experiences.</em>
-</p>
-
-<p align="center">
-  <a href="https://github.com/KritikaGiri"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="mailto:girikritika30@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://linkedin.com/in/kritika-giri"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-</p>
-
----
-
-### ⚡ Quick About Me
-- 🔭 Currently building: High-throughput cloud applications, microservices, and AI developer tools.
-- 💡 Core Expertise: **TypeScript**, **React**, **Next.js**, **Node.js**, **Express**, **PostgreSQL**, **Redis**, and **Docker**.
-- 💬 Ask me about: Full stack architecture, clean code practices, and web performance optimization.
-- 📫 How to reach me: **[girikritika30@gmail.com](mailto:girikritika30@gmail.com)**
+### 3. Add Individual Projects in the "Projects" Section
+Under **Add profile section** &rarr; **Additional** &rarr; **Add project**, add each of the 4 applications with its respective live link and GitHub repository.
 
 ---
 
-### 🛠️ Tech Stack & Arsenal
+## ▲ How to Deploy This Portfolio on Vercel (1-Click)
 
-| Domain | Technologies |
-| :--- | :--- |
-| **Frontend** | React, Next.js, TypeScript, JavaScript (ES6+), HTML5/CSS3, Tailwind CSS, Redux, Zustand |
-| **Backend** | Node.js, Express, Python, FastAPI, PostgreSQL, MongoDB, Redis, GraphQL, REST APIs |
-| **DevOps & Cloud** | Docker, Git, GitHub Actions, AWS (S3/EC2), Linux, Nginx, CI/CD |
+This repository includes a pre-configured `vercel.json` for zero-configuration static hosting and clean URLs:
 
----
+### Method A: One-Click Deploy Button
+Click the button below to import the repository and deploy immediately:
 
-### 📊 GitHub Activity & Stats
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKritzz-23%2FKritzz-23.github.io)
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=KritikaGiri&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=06b6d4" alt="Kritika's GitHub Stats" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=KritikaGiri&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=KritikaGiri&theme=tokyonight&hide_border=true&background=0d1117&ring=8b5cf6&fire=06b6d4" alt="GitHub Streak" />
-</p>
+### Method B: Manual Git Import on Vercel
+1. Log in to [vercel.com](https://vercel.com).
+2. Click **Add New...** &rarr; **Project**.
+3. Under **Import Git Repository**, select `Kritzz-23/Kritzz-23.github.io`.
+4. Keep **Framework Preset** as **Other** (Root directory: `./`).
+5. Click **Deploy**.
+6. In ~15 seconds, Vercel will assign you a live production URL (e.g. `https://kritzz-23.vercel.app`) with automatic SSL and global CDN caching.
 
 ---
 
-<p align="center">
-  ⭐ <em>"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</em> ⭐
-</p>
-```
+## 🛠️ Tech Stack & Architecture Highlights
+
+- **Frontend**: Semantic HTML5, Vanilla Modern CSS3 (Custom Design System, Zero External Bloat), ES6+ JavaScript.
+- **Backend & APIs**: Python, FastAPI, Asynchronous REST endpoints, Simulated HMAC-SHA256 JWT tokens with role-based access control.
+- **AI & NLP**: Transformers, Contextual Token Classification, Semantic Skill Vector Scoring.
+- **Data Persistence**: `localStorage` JSON synchronization, Relational database schemas (SQL).
+- **Design Philosophy**: Pristine white modern aesthetic (`#FFFFFF`), neutral borders (`#E5E7EB`), accessible contrast, and zero AI template artifacts.
 
 ---
 
-## 📁 Project Structure
+## 📬 Contact & Socials
 
-```
-kritika-portfolio/
-│
-├── index.html                   # Master entry point (Semantic HTML5, SEO optimized)
-├── css/
-│   └── styles.css               # Full design system, tokens, responsive layout & themes
-├── js/
-│   ├── data.js                  # Centralized structured data (projects, skills, bio)
-│   └── main.js                  # Terminal simulator, typewriter, sound engine, modal manager
-├── assets/
-│   └── images/
-│       ├── avatar.jpg           # High-resolution 3D developer avatar
-│       ├── project-devflow.jpg  # DevFlow AI Workspace mockup
-│       ├── project-cloudmetrics.jpg # Skyline Observability mockup
-│       └── project-novacommerce.jpg # NovaCommerce storefront mockup
-└── README.md                    # Deployment guide & profile template
-```
-
----
-
-## 📝 Customization Tips
-
-- **Update Projects & Skills**: Edit `js/data.js` to change or add projects, skills, or timeline items.
-- **Change Links or Bio**: In `js/data.js`, modify the `PORTFOLIO_DATA.profile` object.
-- **Add Images**: Place any new project screenshots into `assets/images/` and update `image` in `js/data.js`.
+- **Portfolio**: [https://kritzz-23.github.io/](https://kritzz-23.github.io/)
+- **LinkedIn**: [linkedin.com/in/kritika-giri-2320aa345](https://www.linkedin.com/in/kritika-giri-2320aa345/)
+- **GitHub**: [github.com/Kritzz-23](https://github.com/Kritzz-23)
+- **Email**: [girikritika30@gmail.com](mailto:girikritika30@gmail.com)
