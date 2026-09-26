@@ -1,388 +1,845 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-accent="violet">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Primary Meta Tags -->
-  <title>Kritika Giri — Strategy · Code · Architecture · Applied AI</title>
-  <meta name="title" content="Kritika Giri — Strategy · Code · Architecture · Applied AI">
-  <meta name="description" content="Portfolio of Kritika Giri (@Kritzz-23) — Full Stack Developer & 4th-Year Undergraduate at Brainware University, Kolkata (CGPA 8.54). Inspired by Awwwards Gravity Design.">
-  <meta name="keywords" content="Kritika Giri, Kritzz-23, Gravity Design, Awwwards, Full Stack Developer, Software Engineer, Python, React, FastAPI, Machine Learning, Brainware University">
+  <title>Kritika Giri — Full Stack Developer | Portfolio</title>
+  <meta name="title" content="Kritika Giri — Full Stack Developer | Portfolio">
+  <meta name="description" content="Portfolio of Kritika Giri (@Kritzz-23) — Full Stack Developer specializing in Python, React, JavaScript, FastAPI, SQL, and modern scalable web applications. Brainware University, Kolkata (CGPA 8.54).">
+  <meta name="keywords" content="Kritika Giri, Kritzz-23, Full Stack Developer, Software Engineer, Python, React, FastAPI, JavaScript, Portfolio, Kolkata">
   <meta name="author" content="Kritika Giri">
-  <meta name="theme-color" content="#101010">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kritzz-23.github.io/">
-  <meta property="og:title" content="Kritika Giri — Gravity Design Portfolio">
-  <meta property="og:description" content="Strategy · Code · Architecture · Applied AI. Interactive 3D Orbit & Gravitational Experiences.">
-  <meta property="og:image" content="assets/images/project-sentinel.jpg">
+  <meta property="og:title" content="Kritika Giri — Full Stack Developer">
+  <meta property="og:description" content="Full Stack Web Development, Scalable APIs, and Applied AI Systems.">
+  <meta property="og:image" content="assets/images/neural-architecture.jpg">
 
-  <!-- Google Fonts -->
+  <!-- High-End Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2244%22 fill=%22none%22 stroke=%22%23B481F8%22 stroke-width=%228%22/><circle cx=%2250%22 cy=%2220%22 r=%2212%22 fill=%22%23B481F8%22/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 <body>
 
-  <!-- Custom Magnetic Cursor -->
-  <div class="cursor-dot" id="cursor-dot"></div>
-  <div class="cursor-follower" id="cursor-follower"></div>
+  <!-- Ambient Light Fields -->
+  <div class="bg-mesh-glow" aria-hidden="true">
+    <div class="mesh-circle mesh-1"></div>
+    <div class="mesh-circle mesh-2"></div>
+    <div class="mesh-circle mesh-3"></div>
+  </div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Minimal Floating Header (Gravity Navigation) -->
-  <header class="om-header">
-    <a href="#hero" class="om-brand" aria-label="Kritika Giri">
-      <div class="om-brand-orbit">
-        <svg viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="42" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 6"/>
-          <circle cx="50" cy="50" r="28" stroke="var(--accent)" stroke-width="2.5"/>
-          <circle cx="50" cy="22" r="6" fill="var(--accent)"/>
-          <circle cx="50" cy="50" r="8" fill="var(--fg)"/>
-        </svg>
-      </div>
-      <div>
-        <div class="om-brand-title">KRITIKA GIRI</div>
-        <div class="om-brand-sub">FULL STACK DEVELOPER · 4TH YEAR (8.54 CGPA)</div>
-      </div>
-    </a>
+  <div class="content-wrapper">
 
-    <nav class="om-nav">
-      <ul class="om-nav-list">
-        <li><a href="#hero" class="om-nav-link"><span>00</span>ROOT</a></li>
-        <li><a href="#orbit" class="om-nav-link"><span>01</span>ORBIT</a></li>
-        <li><a href="#bigbang" class="om-nav-link"><span>02</span>BIG BANG</a></li>
-        <li><a href="#bio" class="om-nav-link"><span>03</span>THAT'S ME</a></li>
-        <li><a href="#lab" class="om-nav-link"><span>04</span>GRAVITY LAB</a></li>
-        <li><a href="#contact" class="om-nav-link"><span>05</span>CONTACT</a></li>
-      </ul>
-
-      <div class="om-nav-actions">
-        <button class="om-action-btn" id="sound-btn" title="Toggle Synthesizer Sound" aria-label="Sound Toggle">
-          <span id="sound-icon">🔇</span>
-        </button>
-        <button class="om-action-btn" id="theme-btn" title="Toggle Dark/Light Mode" aria-label="Theme Toggle">
-          <span id="theme-icon">☀️</span>
-        </button>
-        <div class="om-status-pill">
-          <span class="om-pulse-dot"></span>
-          <span>AVAILABLE FOR ROLES</span>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ========================================================================
-       STAGE 0: HERO & GRAVITATIONAL CURSOR FIELD
-       ======================================================================== -->
-  <section class="stage-hero" id="hero">
-    <!-- Gravitational Interactive Particle Canvas -->
-    <canvas id="hero-gravity-canvas"></canvas>
-
-    <!-- Concentric Celestial Gravitational Mass SVG -->
-    <div class="om-center-mass" aria-hidden="true">
-      <svg viewBox="0 0 600 600" fill="none">
-        <defs>
-          <radialGradient id="massGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#B481F8" stop-opacity="0.3"/>
-            <stop offset="60%" stop-color="#B481F8" stop-opacity="0.08"/>
-            <stop offset="100%" stop-color="#B481F8" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <!-- Outer Orbit Ring -->
-        <circle class="om-mass-ring-1" cx="300" cy="300" r="260" stroke="rgba(237,235,230,0.08)" stroke-width="1.5" stroke-dasharray="6 12"/>
-        <!-- Middle Orbit Ring -->
-        <circle class="om-mass-ring-2" cx="300" cy="300" r="180" stroke="rgba(180,129,248,0.2)" stroke-width="2"/>
-        <circle cx="300" cy="120" r="10" fill="#4EECD5" filter="drop-shadow(0 0 10px #4EECD5)"/>
-        <!-- Gravitational Core -->
-        <circle class="om-mass-core" cx="300" cy="300" r="90" fill="url(#massGlow)"/>
-        <circle cx="300" cy="300" r="42" fill="#101010" stroke="#B481F8" stroke-width="3"/>
-        <circle cx="300" cy="300" r="16" fill="#EDEBE6"/>
-      </svg>
-    </div>
-
-    <!-- Main Typographic Hero Lockup -->
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span>⚡</span>
-        <span>A Place Where Software Architecture Meets Artificial Intelligence</span>
-      </div>
-
-      <h1 class="hero-title">
-        KRITIKA <span class="accent-text">GIRI</span>
-      </h1>
-
-      <p class="hero-philosophy">
-        Strategy · Concept · Code · Applied AI
-      </p>
-
-      <div class="hero-credentials-pill">
-        <span>Full Stack Developer</span>
-        <span class="divider">•</span>
-        <span>4th-Year Undergraduate (Final Year)</span>
-        <span class="divider">•</span>
-        <span>Brainware University, Kolkata</span>
-        <span class="divider">•</span>
-        <span>CGPA <strong>8.54 / 10</strong></span>
-      </div>
-
-      <div class="hero-cta-group">
-        <a href="#orbit" class="btn-gravity-primary" id="cta-orbit-btn">
-          <span>🪐 Explore Project Orbit</span>
-          <span>↓</span>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo" aria-label="Kritika Giri Home">
+          <span class="brand-badge">&lt;KG /&gt;</span>
+          <span class="brand-name">Kritika<span class="brand-dot">.</span>Giri</span>
         </a>
-        <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer" class="btn-gravity-secondary">
-          <span>🚀 SentinelAI Live App</span>
-          <span>↗</span>
-        </a>
-        <button class="btn-gravity-secondary" id="cta-bang-btn">
-          <span>💥 Detonate Big Bang</span>
-        </button>
-        <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="btn-gravity-secondary">
-          <span>🐙 GitHub @Kritzz-23</span>
-        </a>
-      </div>
-    </div>
 
-    <div class="hero-scroll-hint">
-      <span>DRAG CURSOR TO WARP GRAVITY</span>
-      <span>↓</span>
-    </div>
-  </section>
+        <!-- Desktop Navigation -->
+        <nav>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#nlp-demo" class="nav-link">Live NLP Demo</a></li>
+            <li><a href="#skills" class="nav-link">Arsenal</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#arch-flow" class="nav-link">Architecture</a></li>
+            <li><a href="#experience" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
 
-  <!-- ========================================================================
-       STAGE 1: 01 / PROJECT ORBIT (3D Planetary Perspective System)
-       ======================================================================== -->
-  <section class="stage-orbit" id="orbit">
-    <div class="section-wrapper" style="padding-bottom: 20px;">
-      <div class="section-header">
-        <span class="section-index">01 / PROJECT ORBIT</span>
-        <h2 class="section-title">ENGINEERING SATELLITES</h2>
-        <p class="section-desc">
-          Interactive cylindrical 3D orbital system. Drag left or right to spin the orbit, or use mouse wheel to rotate between systems.
-        </p>
-      </div>
+        <!-- Command Palette Trigger & Controls -->
+        <div class="header-actions">
+          <button class="cmd-palette-btn" title="Open Quick Command Palette (Ctrl+K)" aria-label="Command Palette">
+            <span>🔍</span>
+            <span class="cmd-badge">Ctrl + K</span>
+          </button>
 
-      <div class="orbit-controls-bar">
-        <button class="orbit-switch-btn" id="orbit-view-toggle">
-          <span id="orbit-mode-icon">🪐</span>
-          <span id="orbit-mode-label">SWITCH TO GALLERY VIEW</span>
-        </button>
-        <div class="orbit-hint-text">
-          DRAG TO ROTATE ORBIT · CLICK SATELLITE TO LAUNCH INSPECTOR
+          <!-- Accent Dropdown -->
+          <div class="accent-dropdown">
+            <button class="control-btn accent-dots-btn" id="accent-btn" title="Accent Color Theme" aria-label="Accent Palette">
+              <span class="color-dot-indicator"></span>
+            </button>
+            <div class="accent-palette-menu" id="accent-menu">
+              <button class="accent-opt" data-accent="violet">
+                <span class="palette-swatch swatch-violet"></span> Cyber Violet
+              </button>
+              <button class="accent-opt" data-accent="cyan">
+                <span class="palette-swatch swatch-cyan"></span> Neon Cyan
+              </button>
+              <button class="accent-opt" data-accent="emerald">
+                <span class="palette-swatch swatch-emerald"></span> Matrix Green
+              </button>
+              <button class="accent-opt" data-accent="amber">
+                <span class="palette-swatch swatch-amber"></span> Sunset Amber
+              </button>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="control-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+            <span id="theme-icon">☀️</span>
+          </button>
+
+          <!-- Sound Effects -->
+          <button class="control-btn" id="sound-toggle" title="Synthesized Audio Effects" aria-label="Toggle Sound">
+            <span id="sound-icon">🔇</span>
+          </button>
+
+          <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- 3D Cylindrical Orbit Viewport -->
-    <div class="orbit-viewport" id="orbit-viewport">
-      <div class="orbit-world" id="orbit-world">
-        <!-- Rendered dynamically by js/main.js -->
-      </div>
+    <main>
+      <!-- Hero Section: Executive Silicon Valley Level -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-status-badge">
+                <span class="status-dot"></span>
+                <span>4th-Year Undergraduate &bull; Brainware University (CGPA 8.54) &bull; Kolkata</span>
+              </div>
 
-      <!-- Navigation Arrows -->
-      <div class="orbit-nav-arrows">
-        <button class="orbit-arrow-btn" id="orbit-prev-btn" aria-label="Previous Satellite">‹</button>
-        <button class="orbit-arrow-btn" id="orbit-next-btn" aria-label="Next Satellite">›</button>
-      </div>
-    </div>
-  </section>
+              <h1 class="hero-name">Kritika Giri</h1>
 
-  <!-- ========================================================================
-       STAGE 2: 02 / THE BIG BANG (Interactive Cosmic Detonation)
-       ======================================================================== -->
-  <section class="stage-bigbang" id="bigbang">
-    <canvas id="bigbang-canvas"></canvas>
+              <div class="hero-role-wrapper">
+                <span>Specialized in</span>
+                <span class="typewriter-text" id="typewriter-text"></span>
+              </div>
 
-    <div class="bigbang-content">
-      <span class="section-index" style="color: #FF6584;">02 / THE BIG BANG</span>
-      <h2 class="section-title" style="margin-bottom: 16px;">FROM SINGULARITY TO SCALE</h2>
-      <p class="section-desc" style="margin: 0 auto; max-width: 620px;">
-        Every complex software ecosystem originates as a single point of intention. Click the singularity to ignite a cosmic particle explosion and watch gravity pull it back into harmonic order.
-      </p>
+              <p class="hero-bio">
+                Building resilient <strong>full-stack web applications</strong>, high-performance <strong>backend APIs &amp; databases</strong>, and <strong>applied AI systems</strong>. Combining modern frontend frameworks (React, JavaScript) with scalable backend architectures (Python, FastAPI, SQL) to ship production-ready, sub-second software.
+              </p>
 
-      <button class="bigbang-trigger-btn" id="bigbang-trigger-btn">
-        <span>💥 DETONATE SINGULARITY</span>
-      </button>
+              <!-- Quick Tech Stack Chips -->
+              <div class="hero-tech-pills">
+                <span class="hero-tech-tag">🐍 Python 3.x</span>
+                <span class="hero-tech-tag">📑 NLP Transformers</span>
+                <span class="hero-tech-tag">⚡ FastAPI &amp; REST</span>
+                <span class="hero-tech-tag">⚛️ React &amp; ES6+</span>
+                <span class="hero-tech-tag">🗄️ PostgreSQL / SQL</span>
+                <span class="hero-tech-tag">🐳 Docker &amp; Linux</span>
+              </div>
 
-      <div class="bigbang-stats-hud">
-        <div class="bigbang-stat-item">
-          <span class="bigbang-stat-val" id="hud-particles">1,200</span>
-          <span class="bigbang-stat-label">PARTICLES DETONATED</span>
-        </div>
-        <div class="bigbang-stat-item">
-          <span class="bigbang-stat-val" id="hud-velocity">840 km/s</span>
-          <span class="bigbang-stat-label">PEAK EXPANSION</span>
-        </div>
-        <div class="bigbang-stat-item">
-          <span class="bigbang-stat-val" id="hud-cycle">#01</span>
-          <span class="bigbang-stat-label">COSMIC CYCLE</span>
-        </div>
-      </div>
-    </div>
-  </section>
+              <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                  Explore Projects ⚡
+                </a>
+                <a href="#nlp-demo" class="btn btn-secondary">
+                  Test Live NLP Demo 🔬
+                </a>
+                <button class="btn btn-outline" id="open-resume-btn">
+                  View Resume 📄
+                </button>
+              </div>
 
-  <!-- ========================================================================
-       STAGE 3: 03 / THAT'S ME (Editorial Bio & Academic Credentials)
-       ======================================================================== -->
-  <section class="stage-bio" id="bio">
-    <div class="section-header">
-      <span class="section-index">03 / THAT'S ME</span>
-      <h2 class="section-title">THE ARCHITECT BEHIND THE SYSTEM</h2>
-    </div>
+              <div class="hero-stats-row">
+                <div class="stat-item">
+                  <div class="stat-num">8.54<span>/10</span></div>
+                  <div class="stat-label">Academic CGPA</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num">4<span>+</span></div>
+                  <div class="stat-label">Shipped Repositories</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num">99.9<span>%</span></div>
+                  <div class="stat-label">Pipeline Reliability</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num">2027</div>
+                  <div class="stat-label">Expected Graduation</div>
+                </div>
+              </div>
+            </div>
 
-    <div class="bio-grid">
-      <!-- Left: Portrait in Gravitational Frame -->
-      <div class="bio-portrait-col">
-        <div class="bio-portrait-frame">
-          <img src="assets/images/avatar.jpg" alt="Kritika Giri Portrait" loading="lazy">
-          <div class="bio-portrait-badge">
-            <div class="bio-badge-name">Kritika Giri</div>
-            <div class="bio-badge-role">Full Stack Developer · Applied AI</div>
+            <!-- Hero Visual: System Monitor & Neural Visualizer Window -->
+            <div class="hero-visual">
+              <div class="sys-monitor-window">
+                <div class="sys-monitor-header">
+                  <div class="sys-header-left">
+                    <span class="term-dot dot-red"></span>
+                    <span class="term-dot dot-yellow"></span>
+                    <span class="term-dot dot-green"></span>
+                    <span class="sys-monitor-title">SYSTEM MONITOR &bull; AI PIPELINE v2.4</span>
+                  </div>
+                  <div class="sys-live-badge">
+                    <span class="status-dot" style="width: 6px; height: 6px;"></span> ACTIVE
+                  </div>
+                </div>
+
+                <div class="sys-img-wrap">
+                  <img src="assets/images/neural-architecture.jpg" alt="Neural Network Data Flow and Semantic Visualizer" class="sys-img">
+                </div>
+
+                <div class="sys-footer-stats">
+                  <div class="sys-stat-cell">
+                    <div class="sys-stat-val">12,892</div>
+                    <div class="sys-stat-lbl">Active Nodes</div>
+                  </div>
+                  <div class="sys-stat-cell">
+                    <div class="sys-stat-val">28ms</div>
+                    <div class="sys-stat-lbl">Inference Latency</div>
+                  </div>
+                  <div class="sys-stat-cell">
+                    <div class="sys-stat-val">Healthy</div>
+                    <div class="sys-stat-lbl">Cluster State</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Right: Narrative & Academic Merit -->
-      <div class="bio-text-col">
-        <p class="bio-lead">
-          I build resilient, high-throughput digital systems where <strong>clean full-stack architecture</strong> merges seamlessly with <strong>applied machine learning intelligence</strong>.
-        </p>
+      <!-- ADVANCED FEATURE 1: Interactive NLP Contract Risk Analyzer Playground -->
+      <section class="section" id="nlp-demo" style="background: rgba(255, 255, 255, 0.015);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Live System Playground</span>
+            <h2 class="section-title">Interactive NLP <span class="text-gradient">Risk Inference</span></h2>
+            <p class="section-description">
+              Test the real-time contract analysis intelligence engine powering the <strong>AI Contract Risk Analyzer</strong>. Select a clause or paste your own contract excerpt below.
+            </p>
+          </div>
 
-        <!-- Academic Credentials Card -->
-        <div class="bio-academic-card">
-          <div class="academic-badge-row">
-            <span class="academic-badge">Academic Credentials · Final Year</span>
-            <span class="academic-cgpa">CGPA 8.54 / 10</span>
+          <div class="playground-wrapper">
+            <div class="playground-header">
+              <div class="playground-title-group">
+                <h3>⚡ Legal Risk Classification Engine</h3>
+                <div class="playground-sub">Transformer attention &bull; 15-class liability taxonomy &bull; Token classification</div>
+              </div>
+
+              <!-- Sample Clauses -->
+              <div class="sample-clauses-nav">
+                <span style="font-size: 0.8rem; color: var(--text-dim); margin-right: 4px;">Preset Clauses:</span>
+                <button class="clause-chip-btn active" data-sample="indemnity">Unlimited Indemnity</button>
+                <button class="clause-chip-btn" data-sample="noncompete">Restrictive Non-Compete</button>
+                <button class="clause-chip-btn" data-sample="confidentiality">Standard NDA</button>
+              </div>
+            </div>
+
+            <!-- Clause Input Editor Box -->
+            <div class="playground-editor-box">
+              <textarea id="nlp-clause-input" class="playground-textarea" spellcheck="false" placeholder="Paste or type a legal contract clause to analyze..."></textarea>
+            </div>
+
+            <div class="playground-action-row">
+              <div style="font-size: 0.82rem; color: var(--text-dim);">
+                💡 Tip: Click <strong>Analyze Risk Pipeline</strong> to execute token extraction and contextual risk scoring.
+              </div>
+              <button class="btn btn-primary" id="nlp-run-btn">
+                Analyze Risk Pipeline ⚡
+              </button>
+            </div>
+
+            <!-- Dynamic Results Card -->
+            <div class="playground-results-card" id="nlp-results-card">
+              <div class="res-metrics-grid">
+                <div class="res-metric-item">
+                  <div class="res-metric-lbl">Identified Category</div>
+                  <div class="res-metric-val" id="nlp-res-category">Indemnification &amp; Unlimited Liability</div>
+                </div>
+                <div class="res-metric-item">
+                  <div class="res-metric-lbl">Risk Assessment</div>
+                  <div class="res-metric-val high-risk" id="nlp-res-score">CRITICAL RISK (94/100)</div>
+                </div>
+                <div class="res-metric-item">
+                  <div class="res-metric-lbl">Inference Latency</div>
+                  <div class="res-metric-val" style="color: #38bdf8;">~32ms</div>
+                </div>
+              </div>
+
+              <div style="font-size: 0.82rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Flagged Dangerous Token Spans:</div>
+              <div class="highlighted-clause-box" id="nlp-res-highlighted">
+                <!-- Highlighted tokens inserted here -->
+              </div>
+
+              <div style="font-size: 0.82rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Recommended Legal Remediation:</div>
+              <div class="remediation-box" id="nlp-res-remediation">
+                <!-- Remediation advice inserted here -->
+              </div>
+            </div>
           </div>
-          <div class="academic-institution">Brainware University, Kolkata</div>
-          <div class="academic-degree">
-            Bachelor of Technology (B.Tech) — Computer Science & Engineering (AI & ML)
+        </div>
+      </section>
+
+      <!-- About & Terminal Section -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Engineering Profile</span>
+            <h2 class="section-title">Behind The <span class="text-gradient">Systems</span></h2>
+            <p class="section-description">
+              A synthesis of academic rigor, applied machine learning, and clean software architecture.
+            </p>
           </div>
-          <p style="font-size: 0.88rem; color: var(--fg-dim); line-height: 1.5;">
-            4th-Year Undergraduate specializing in algorithmic foundations, system design, asynchronous API pipelines, and applied deep learning models.
-          </p>
+
+          <div class="about-grid">
+            <div class="about-text-content">
+              <!-- Humanized Story Card -->
+              <div class="human-story-card">
+                <div class="human-avatar-frame">
+                  <img src="assets/images/avatar.jpg" alt="Kritika Giri" loading="lazy">
+                </div>
+                <div>
+                  <div class="human-story-quote">
+                    "I believe the best software lives where architectural discipline meets real human empathy. As a final-year developer, my goal is simple: bridge intelligent backend models with fast, accessible web interfaces that people actually enjoy using."
+                  </div>
+                  <div class="human-story-author">
+                    Kritika Giri &bull; 4th-Year Undergraduate (Final Year) &bull; CGPA 8.54 / 10 &bull; Brainware University
+                  </div>
+                </div>
+              </div>
+
+              <p class="lead-p">
+                I am a Full Stack Developer currently pursuing my Bachelor of Technology in Computer Science &amp; Engineering (AI &amp; ML) at Brainware University, Kolkata.
+              </p>
+              <p style="color: var(--text-muted); line-height: 1.7;">
+                My technical philosophy emphasizes applied impact: transforming complex machine learning research into responsive, reliable, and accessible products. Whether it is engineering NLP systems that evaluate legal liabilities or platforms helping students secure technical internships, I prioritize clean code, testability, and sub-second performance.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-box">
+                  <div class="feature-icon">🧠</div>
+                  <div class="feature-title">Applied NLP &amp; Transformers</div>
+                  <div class="feature-desc">Building token classification, semantic clustering, and transformer-based risk detection pipelines.</div>
+                </div>
+                <div class="feature-box">
+                  <div class="feature-icon">💻</div>
+                  <div class="feature-title">Full Stack Systems</div>
+                  <div class="feature-desc">Developing clean web dashboards with Python backends (FastAPI), React, JavaScript, and SQL.</div>
+                </div>
+                <div class="feature-box">
+                  <div class="feature-icon">📊</div>
+                  <div class="feature-title">Academic Distinction</div>
+                  <div class="feature-desc">Maintaining a strong academic foundation with an 8.54 / 10 CGPA across all completed semesters.</div>
+                </div>
+                <div class="feature-box">
+                  <div class="feature-icon">🛡️</div>
+                  <div class="feature-title">Operational Resilience</div>
+                  <div class="feature-desc">Containerized deployments with Docker, structured logging with SentinelAI, and automated CI/CD.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Terminal Window -->
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="term-dot dot-red"></span>
+                  <span class="term-dot dot-yellow"></span>
+                  <span class="term-dot dot-green"></span>
+                </div>
+                <div class="terminal-tabs">
+                  <button class="term-tab active" data-tab="kritika.py">kritika.py</button>
+                  <button class="term-tab" data-tab="stack.json">stack.json</button>
+                  <button class="term-tab" data-tab="terminal">terminal 💻</button>
+                </div>
+                <button class="term-action-copy" id="term-copy-btn" title="Copy code snippet">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+
+              <div class="terminal-body">
+                <div id="terminal-code-display"></div>
+
+                <div class="terminal-shell" id="term-shell-pane" style="display: none;">
+                  <div style="color: #64748b; font-size: 0.8rem; margin-bottom: 8px;">
+                    KritikaOS (x86_64-pc-linux-gnu)<br>
+                    Type <span style="color: #34d399;">help</span> to inspect available interactive commands.
+                  </div>
+                  <div class="term-history" id="term-history"></div>
+                  <div class="term-input-row">
+                    <span class="term-prompt">visitor@kritika:~$</span>
+                    <input type="text" class="term-input" id="term-input" placeholder="Type 'help' and press Enter..." autocomplete="off" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Arsenal & Skills Matrix -->
+      <section class="section" id="skills" style="background: rgba(255, 255, 255, 0.015);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Core Competencies</span>
+            <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
+            <p class="section-description">
+              Languages, machine learning architectures, frameworks, and database technologies I leverage daily.
+            </p>
+          </div>
+
+          <div class="skills-controls">
+            <div class="skills-filter-nav">
+              <button class="filter-btn active" data-filter="all">All Disciplines</button>
+              <button class="filter-btn" data-filter="backend">Python &amp; AI / ML</button>
+              <button class="filter-btn" data-filter="frontend">Frontend &amp; Web</button>
+              <button class="filter-btn" data-filter="devops">DevOps &amp; Systems</button>
+            </div>
+
+            <div class="skills-search-wrapper">
+              <span class="skills-search-icon">🔍</span>
+              <input type="text" id="skills-search" class="skills-search-input" placeholder="Search competencies (e.g. Python, NLP, React, SQL)..." aria-label="Search skills">
+            </div>
+          </div>
+
+          <div class="skills-grid" id="skills-grid-container"></div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Case Studies</span>
+            <h2 class="section-title">Featured <span class="text-gradient">Creations</span></h2>
+            <p class="section-description">
+              Production systems solving concrete problems across legal NLP, incident intelligence, and personal finance.
+            </p>
+          </div>
+
+          <div class="projects-filter-bar">
+            <button class="project-pill active" data-filter="all">All Projects (4)</button>
+            <button class="project-pill" data-filter="fullstack">AI &amp; Full Stack</button>
+            <button class="project-pill" data-filter="backend">Observability &amp; Systems</button>
+            <button class="project-pill" data-filter="frontend">Web Applications</button>
+          </div>
+
+          <div class="projects-grid" id="projects-grid-container"></div>
+        </div>
+      </section>
+
+      <!-- ADVANCED FEATURE 2: Interactive System Architecture Flow Explorer -->
+      <section class="section" id="arch-flow" style="background: rgba(255, 255, 255, 0.015);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Deep Engineering</span>
+            <h2 class="section-title">System Architecture <span class="text-gradient">Pipeline</span></h2>
+            <p class="section-description">
+              Interactive end-to-end data flow for the <strong>AI Contract Risk Analyzer</strong> inference pipeline. Click any node to inspect technical specifications and latency budgets.
+            </p>
+          </div>
+
+          <div class="arch-flow-wrapper">
+            <div class="arch-flow-header">
+              <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-main);">
+                ⚡ High-Throughput Legal NLP Pipeline Execution
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-primary);">
+                Total Pipeline Budget: &lt; 70ms
+              </div>
+            </div>
+
+            <!-- Pipeline Diagram -->
+            <div class="pipeline-diagram-grid">
+              <div class="pipeline-node active" data-node="0">
+                <div class="node-step-badge">STEP 01</div>
+                <div class="node-title">Document Ingest</div>
+                <div class="node-latency">~12ms</div>
+              </div>
+              <div class="pipeline-arrow">&rarr;</div>
+
+              <div class="pipeline-node" data-node="1">
+                <div class="node-step-badge">STEP 02</div>
+                <div class="node-title">Subword Tokenizer</div>
+                <div class="node-latency">~6ms</div>
+              </div>
+              <div class="pipeline-arrow">&rarr;</div>
+
+              <div class="pipeline-node" data-node="2">
+                <div class="node-step-badge">STEP 03</div>
+                <div class="node-title">Transformer Embed</div>
+                <div class="node-latency">~26ms</div>
+              </div>
+              <div class="pipeline-arrow">&rarr;</div>
+
+              <div class="pipeline-node" data-node="3">
+                <div class="node-step-badge">STEP 04</div>
+                <div class="node-title">Multi-Head Classify</div>
+                <div class="node-latency">~18ms</div>
+              </div>
+              <div class="pipeline-arrow">&rarr;</div>
+
+              <div class="pipeline-node" data-node="4">
+                <div class="node-step-badge">STEP 05</div>
+                <div class="node-title">Risk Scoring &amp; UI</div>
+                <div class="node-latency">~8ms</div>
+              </div>
+            </div>
+
+            <!-- Detail Panel -->
+            <div class="node-detail-panel">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="node-detail-title" id="arch-node-title">Document Ingestion</div>
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #10b981;" id="arch-node-latency">Processing Time: ~12ms</div>
+              </div>
+              <div class="node-detail-desc" id="arch-node-desc">
+                Raw document ingestion (PDF, Word, Plaintext) with regex normalization, token stream extraction, and layout-preserving sentence splitting.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Academic Standing Timeline -->
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Academic &amp; Career Track</span>
+            <h2 class="section-title">Education &amp; <span class="text-gradient">Standing</span></h2>
+            <p class="section-description">
+              Formal engineering foundation in Artificial Intelligence &amp; Machine Learning and ongoing software contributions.
+            </p>
+          </div>
+
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div id="timeline-items-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live GitHub Activity Hub -->
+      <section class="section" id="github-stats" style="background: rgba(255, 255, 255, 0.015);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Open Source Hub</span>
+            <h2 class="section-title">GitHub <span class="text-gradient">Activity &amp; Metrics</span></h2>
+            <p class="section-description">
+              Live automated telemetry from my GitHub account <strong>@Kritzz-23</strong>.
+            </p>
+          </div>
+
+          <div class="github-hub-wrapper">
+            <div class="gh-user-banner">
+              <div class="gh-user-info">
+                <div class="gh-avatar-small">
+                  <img src="assets/images/avatar.jpg" alt="Kritika Giri">
+                </div>
+                <div class="gh-names">
+                  <h3>Kritika Giri</h3>
+                  <div class="gh-username">@Kritzz-23 &bull; Brainware University</div>
+                </div>
+              </div>
+
+              <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Open GitHub Profile ↗
+              </a>
+            </div>
+
+            <div class="gh-stats-grid">
+              <div class="gh-stat-card">
+                <img data-stat-type="stats" src="https://github-readme-stats-sigma-five.vercel.app/api?username=Kritzz-23&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=06b6d4" alt="GitHub Stats" loading="lazy">
+              </div>
+
+              <div class="gh-stat-card">
+                <img data-stat-type="languages" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Kritzz-23&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6" alt="Top Languages" loading="lazy">
+              </div>
+
+              <div class="gh-stat-card gh-streak-card">
+                <img data-stat-type="streak" src="https://github-readme-streak-stats.herokuapp.com/?user=Kritzz-23&theme=tokyonight&hide_border=true&background=0d1117&ring=8b5cf6&fire=06b6d4" alt="GitHub Streak" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Get in Touch</span>
+            <h2 class="section-title">Let's Build Something <span class="text-gradient">Extraordinary</span></h2>
+            <p class="section-description">
+              Actively seeking software engineering internships, applied AI roles, and high-impact technical collaborations.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info-cards">
+              <div class="contact-card">
+                <div class="contact-icon-box">✉️</div>
+                <div class="contact-card-content">
+                  <h4>Email</h4>
+                  <a href="mailto:girikritika30@gmail.com">girikritika30@gmail.com</a>
+                </div>
+                <button class="contact-copy-btn" id="copy-email-btn" title="Copy email address">Copy</button>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-icon-box">🐙</div>
+                <div class="contact-card-content">
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer">github.com/Kritzz-23</a>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-icon-box">💼</div>
+                <div class="contact-card-content">
+                  <h4>LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kritika-giri-2320aa345</a>
+                </div>
+              </div>
+
+              <div class="time-status-box">
+                <div class="time-dot"></div>
+                <div class="time-text">
+                  <strong>Location:</strong> Kolkata, India &bull; <span id="live-time-display">Active &amp; Ready to Collaborate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="sender-name">Your Name</label>
+                <input type="text" id="sender-name" class="form-control" placeholder="Sarah Connor" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email">Email Address</label>
+                <input type="email" id="sender-email" class="form-control" placeholder="sarah@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-subject">Subject</label>
+                <input type="text" id="sender-subject" class="form-control" placeholder="Software Engineering Role / Project Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message">Message</label>
+                <textarea id="sender-message" class="form-control" placeholder="Hello Kritika, I saw your portfolio and would like to discuss..." required></textarea>
+              </div>
+
+              <div class="form-feedback" id="form-feedback"></div>
+
+              <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                Send Message 🚀
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="brand-logo">
+            <span class="brand-badge">&lt;KG /&gt;</span>
+            <span class="brand-name">Kritika Giri</span>
+          </div>
+
+          <div class="footer-socials">
+            <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">🐙</a>
+            <a href="mailto:girikritika30@gmail.com" class="social-link" title="Email">✉️</a>
+            <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">💼</a>
+            <a href="#hero" class="social-link" title="Back to Top">⬆️</a>
+          </div>
         </div>
 
-        <!-- 4 Engineering Pillars -->
-        <div class="bio-pillars">
-          <div class="pillar-item">
-            <div class="pillar-num">01</div>
-            <div class="pillar-title">Full Stack Web Engineering</div>
-            <div class="pillar-desc">Modern React.js, ESNext JavaScript, responsive design systems, and client-side performance optimization.</div>
-          </div>
-          <div class="pillar-item">
-            <div class="pillar-num">02</div>
-            <div class="pillar-title">Scalable APIs & Systems</div>
-            <div class="pillar-desc">Python, FastAPI, asynchronous event loops, PostgreSQL/SQLite schema design, and microservice communication.</div>
-          </div>
-          <div class="pillar-item">
-            <div class="pillar-num">03</div>
-            <div class="pillar-title">Applied AI & NLP</div>
-            <div class="pillar-desc">Sentence transformers, legal risk clause extraction, automated incident root cause analysis, and anomaly clustering.</div>
-          </div>
-          <div class="pillar-item">
-            <div class="pillar-num">04</div>
-            <div class="pillar-title">DevOps & Cloud Telemetry</div>
-            <div class="pillar-desc">Docker containerization, Git branch strategies, GitHub Pages CI/CD automation, and Linux administration.</div>
-          </div>
+        <div class="footer-bottom">
+          &copy; 2026 Kritika Giri &bull; Brainware University, Kolkata &bull; Hosted on GitHub Pages.
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       STAGE 4: 04 / GRAVITY IS EVERYWHERE (Interactive Physics Sandbox)
-       ======================================================================== -->
-  <section class="stage-lab" id="lab">
-    <div class="section-header">
-      <span class="section-index">04 / GRAVITY IS EVERYWHERE</span>
-      <h2 class="section-title">THE GRAVITATIONAL PLAYGROUND</h2>
-      <p class="section-desc">
-        Click anywhere on the cosmic grid to spawn celestial mass bodies. Watch them warp spacetime and settle into mathematical orbits.
-      </p>
-    </div>
-
-    <div class="lab-canvas-container">
-      <canvas id="lab-canvas"></canvas>
-
-      <div class="lab-hud-top">
-        <div class="lab-preset-pills">
-          <button class="lab-preset-btn active" data-preset="binary">🌌 Binary Stars</button>
-          <button class="lab-preset-btn" data-preset="solar">🪐 Keplerian Solar System</button>
-          <button class="lab-preset-btn" data-preset="chaos">🌀 Three-Body Chaos</button>
-          <button class="lab-preset-btn" data-preset="clear">🧹 Clear Universe</button>
-        </div>
-
-        <div class="lab-hud-metrics">
-          <span>BODIES: <strong id="lab-hud-bodies">24</strong></span>
-          <span>FPS: <strong id="lab-hud-fps">60</strong></span>
-          <span>G-CONSTANT: <strong id="lab-hud-g">1.0</strong></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       STAGE 5: 05 / ORBITAL CONVERGENCE (Contact)
-       ======================================================================== -->
-  <section class="stage-contact" id="contact">
-    <div class="contact-eyebrow">05 / ORBITAL CONVERGENCE</div>
-    <h2 class="contact-heading">LET'S BUILD SOMETHING EXTRAORDINARY.</h2>
-    <p class="contact-sub">
-      Currently open for full-time Full Stack Developer positions, software engineering internships, and high-impact technical initiatives.
-    </p>
-
-    <div class="contact-pill-grid">
-      <a href="mailto:girikritika30@gmail.com" class="contact-magnetic-pill primary" id="copy-email-btn">
-        <span>📧 girikritika30@gmail.com</span>
-      </a>
-      <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="contact-magnetic-pill">
-        <span>🐙 GitHub: @Kritzz-23</span>
-      </a>
-      <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer" class="contact-magnetic-pill">
-        <span>💼 LinkedIn: Kritika Giri</span>
-      </a>
-      <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer" class="contact-magnetic-pill">
-        <span>🚀 Live App: SentinelAI</span>
-      </a>
-    </div>
-
-    <!-- Footer Lockup -->
-    <footer class="om-footer">
-      <div class="om-footer-left">
-        <span>&copy; 2026 KRITIKA GIRI</span>
-        <span>•</span>
-        <span>DESIGNED WITH GRAVITY DESIGN AESTHETICS</span>
-      </div>
-      <div class="om-footer-right">
-        <span>KOLKATA, INDIA · IST (UTC+5:30)</span>
-        <span>•</span>
-        <span>STATUS: ACTIVE &bull; 99.9% RELIABILITY</span>
       </div>
     </footer>
-  </section>
+  </div>
 
-  <!-- ========================================================================
-       PROJECT DEEP DIVE MODAL
-       ======================================================================== -->
-  <div class="om-modal" id="project-modal" aria-hidden="true">
-    <div class="om-modal-card">
-      <button class="om-modal-close" id="modal-close-btn" aria-label="Close Modal">✕</button>
-      <div id="modal-body-content">
+  <!-- COMMAND PALETTE MODAL (Ctrl + K) -->
+  <div class="cmd-palette-backdrop" id="cmd-palette-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-palette-modal">
+      <div class="cmd-search-header">
+        <span>🔍</span>
+        <input type="text" class="cmd-search-input" id="cmd-palette-input" placeholder="Type a command, project, or section..." autocomplete="off">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-palette-list">
         <!-- Rendered dynamically -->
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification -->
-  <div class="om-toast" id="om-toast">Email copied to clipboard!</div>
+  <!-- Project Details Deep Dive Modal -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="proj-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="proj-modal-title">Project Deep Dive</h3>
+        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body" id="proj-modal-body"></div>
+    </div>
+  </div>
 
-  <!-- Data Hub and Master Script -->
+  <!-- Resume Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-dialog" style="max-width: 820px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="resume-modal-title">Curriculum Vitae — Kritika Giri</h3>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <button class="btn btn-primary btn-sm" id="print-resume-btn">Print / Save PDF 🖨️</button>
+          <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="resume-paper">
+          <div class="resume-header">
+            <h1 class="resume-name">Kritika Giri</h1>
+            <div class="resume-title">Full Stack Developer &amp; Software Engineer</div>
+            <div class="resume-contact-line">
+              <span>✉️ girikritika30@gmail.com</span>
+              <span>🐙 github.com/Kritzz-23</span>
+              <span>💼 linkedin.com/in/kritika-giri-2320aa345</span>
+              <span>📍 Kolkata, India</span>
+            </div>
+          </div>
+
+          <div class="resume-section-title">Executive Summary</div>
+          <p>
+            Undergraduate software engineer in Artificial Intelligence &amp; Machine Learning (AIML) at Brainware University, Kolkata (CGPA: 8.54 / 10). Specialized in designing NLP transformer pipelines, applied machine learning systems, and full-stack web applications with Python, JavaScript, and relational databases.
+          </p>
+
+          <div class="resume-section-title">Education</div>
+          <div style="display: flex; justify-content: space-between; font-weight: 700;">
+            <span>Bachelor of Technology — Computer Science &amp; Engineering (AI &amp; ML)</span>
+            <span>4th Year / Final Year</span>
+          </div>
+          <div style="font-size: 0.9rem; color: #94a3b8; margin-top: 4px;">
+            Brainware University, Kolkata &bull; <strong>CGPA: 8.54 / 10</strong>
+          </div>
+
+          <div class="resume-section-title">Core Competencies</div>
+          <p>
+            <strong>Languages:</strong> Python, JavaScript (ES6+), SQL, HTML5, CSS3.<br>
+            <strong>AI &amp; Machine Learning:</strong> Natural Language Processing (NLP), Transformers, Token Classification, Scikit-Learn, Feature Engineering, Pandas, NumPy.<br>
+            <strong>Web Engineering &amp; Tools:</strong> FastAPI, React.js, REST APIs, Git &amp; GitHub, Docker, Linux, VS Code, CI/CD Workflows.
+          </p>
+
+          <div class="resume-section-title">Key Projects &amp; Contributions</div>
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>AI Contract Risk Analyzer</span>
+              <span>Python &bull; NLP &bull; FastAPI</span>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 4px;">
+              Engineered an applied NLP system that parses legal agreements to flag unbounded indemnities, liability vulnerabilities, and high-exposure clauses in real time.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>InternIntel AI</span>
+              <span>Python &bull; SQL &bull; AI Matching</span>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 4px;">
+              Designed an intelligent platform to discover, match, and organize internship opportunities with automated applicant compatibility scoring.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>SentinelAI</span>
+              <span>Python &bull; Telemetry &bull; Docker</span>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 4px;">
+              Built an incident intelligence tool that ingests application logs, clusters error traces, and surfaces actionable diagnostic insights.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>Smart Expense Tracker</span>
+              <span>JavaScript &bull; Local Storage &bull; Responsive</span>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 4px;">
+              Created an offline-first responsive personal finance manager with client-side persistent storage and real-time visualization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       AI COPILOT: Interactive In-Browser Assistant
+       ======================================================================== -->
+  <div class="ai-copilot-container" id="ai-copilot-container">
+    <!-- Floating Trigger Pill -->
+    <button class="ai-copilot-trigger" id="ai-copilot-trigger" aria-label="Open Kritika AI Copilot">
+      <span class="ai-pulse-dot"></span>
+      <span class="ai-trigger-icon">✨</span>
+      <span class="ai-trigger-text">Ask Kritika AI</span>
+    </button>
+
+    <!-- Slide-Out Chat Drawer -->
+    <div class="ai-copilot-drawer" id="ai-copilot-drawer" aria-hidden="true">
+      <div class="ai-drawer-header">
+        <div class="ai-header-info">
+          <div class="ai-avatar-badge">KG</div>
+          <div>
+            <div class="ai-drawer-title">Kritika AI Copilot</div>
+            <div class="ai-drawer-sub">
+              <span class="status-dot" style="width: 6px; height: 6px;"></span>
+              Active &bull; Neural Portfolio Assistant
+            </div>
+          </div>
+        </div>
+        <button class="ai-drawer-close" id="ai-drawer-close" aria-label="Close Assistant">✕</button>
+      </div>
+
+      <!-- Quick Suggested Prompts -->
+      <div class="ai-suggested-prompts">
+        <button class="ai-prompt-chip" data-prompt="Tell me about SentinelAI and the live app">🚀 SentinelAI Live App</button>
+        <button class="ai-prompt-chip" data-prompt="What is your academic background and CGPA?">🎓 Academic Standing</button>
+        <button class="ai-prompt-chip" data-prompt="What tech stack and frameworks do you use?">🛠️ Technical Stack</button>
+        <button class="ai-prompt-chip" data-prompt="What roles and opportunities are you open to?">💼 Open Roles</button>
+      </div>
+
+      <!-- Chat Messages Body -->
+      <div class="ai-chat-body" id="ai-chat-body">
+        <div class="ai-msg ai-msg-bot">
+          <div class="ai-msg-bubble">
+            Hello! I am <strong>Kritika's AI Copilot</strong>. Ask me anything about her projects, live deployments (like <strong>SentinelAI</strong>), technical stack, 4th-year studies at <strong>Brainware University</strong> (CGPA 8.54), or engineering philosophy!
+          </div>
+          <span class="ai-msg-time">Just now</span>
+        </div>
+      </div>
+
+      <!-- Chat Input Footer -->
+      <form class="ai-chat-input-wrap" id="ai-chat-form">
+        <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Ask about projects, stack, or experience..." autocomplete="off">
+        <button type="submit" class="ai-chat-send-btn" id="ai-chat-send" aria-label="Send Message">
+          <span>➤</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
