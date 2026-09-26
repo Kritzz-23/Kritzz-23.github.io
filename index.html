@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kritika Giri — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFAF7;
+    --ink:#16181D;
+    --ink-soft:#5A5F6B;
+    --accent:#6C4CF1;
+    --highlight:#FFD24D;
+    --line:#E4E1D8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:80px 24px 100px;}
+  h1,h2{font-family:'Fraunces',serif;font-weight:600;margin:0;}
+  h1{font-size:clamp(36px,7vw,56px);letter-spacing:-0.01em;}
+  .role{color:var(--ink-soft);font-size:18px;margin-top:10px;}
+  .mark{background:linear-gradient(transparent 62%, var(--highlight) 62%);padding:0 2px;}
+  .lede{margin-top:32px;font-size:17px;max-width:56ch;color:var(--ink);}
+  .lede p{margin:0 0 16px;}
+  section{margin-top:64px;}
+  h2{font-size:22px;margin-bottom:20px;}
+  .links{display:flex;gap:20px;margin-top:28px;flex-wrap:wrap;}
+  .links a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);font-size:15px;padding-bottom:2px;}
+  .links a:hover{color:var(--accent);border-color:var(--accent);}
+  .project{border-top:1px solid var(--line);padding:24px 0;}
+  .project:last-child{border-bottom:1px solid var(--line);}
+  .project-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .project h3{font-family:'Fraunces',serif;font-weight:600;font-size:20px;margin:0;}
+  .stack{font-size:13px;color:var(--ink-soft);white-space:nowrap;}
+  .project p{margin:10px 0 0;color:var(--ink-soft);font-size:15px;max-width:58ch;}
+  .project a.view{display:inline-block;margin-top:12px;font-size:14px;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:14px;color:var(--ink-soft);}
+  footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px;}
+  @media (max-width:520px){
+    .wrap{padding:56px 20px 80px;}
+    .project-head{flex-direction:column;align-items:flex-start;gap:4px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Kritika Giri</h1>
+    <p class="role">Aspiring AI Engineer — 3rd-year AIML undergraduate, Kolkata</p>
+    <div class="lede">
+      <p>I build <span class="mark">applied machine learning</span> projects — from NLP systems that read contracts to platforms that help students find internships. Currently sharpening my skills in Python, ML and data-driven products.</p>
+    </div>
+    <div class="links">
+      <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:girikritika30@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>AI Contract Risk Analyzer</h3>
+        <span class="stack">Python · NLP</span>
+      </div>
+      <p>AI-assisted contract risk analysis that uses NLP to flag risky clauses in legal documents.</p>
+      <a class="view" href="https://github.com/Kritzz-23/ai-contract-risk-analyzer" target="_blank" rel="noopener">View repo →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>InternIntel AI</h3>
+        <span class="stack">Python</span>
+      </div>
+      <p>An AI-driven internship intelligence platform that helps students discover, manage and track internship opportunities.</p>
+      <a class="view" href="https://github.com/Kritzz-23/InternIntel-AI" target="_blank" rel="noopener">View repo →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>SentinelAI</h3>
+        <span class="stack">Python</span>
+      </div>
+      <p>An AI-powered incident intelligence platform that analyzes incidents and logs to surface actionable insights for faster troubleshooting.</p>
+      <a class="view" href="https://github.com/Kritzz-23/SentinelAI" target="_blank" rel="noopener">View repo →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Smart Expense Tracker</h3>
+        <span class="stack">JavaScript</span>
+      </div>
+      <p>A responsive web app for managing, categorizing and tracking personal expenses, with persistent data storage.</p>
+      <a class="view" href="https://github.com/Kritzz-23/expense-tracker" target="_blank" rel="noopener">View repo →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="chips">
+      <span class="chip">Python</span>
+      <span class="chip">Machine Learning</span>
+      <span class="chip">NLP</span>
+      <span class="chip">Data Analysis</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Git &amp; GitHub</span>
+      <span class="chip">SQL</span>
+    </div>
+  </section>
+
+  <footer>
+    Kolkata, India — <a href="mailto:girikritika30@gmail.com" style="color:inherit;">girikritika30@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
