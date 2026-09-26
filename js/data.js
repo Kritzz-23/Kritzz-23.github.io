@@ -53,6 +53,42 @@ var PORTFOLIO_DATA = {
 
   projects: [
     {
+      id: "pulsehr-mern",
+      title: "PulseHR — Employee Management & HRMS",
+      category: "fullstack",
+      categoryLabel: "MERN Stack Enterprise",
+      stars: "Live App",
+      image: "assets/images/project-devflow.jpg",
+      description: "Industry-grade MERN Stack HRMS & Employee Management System featuring hierarchical RBAC (Admin, HR, Manager, Employee), JWT Authentication, Real-time Attendance, Leave Approvals, and Company Analytics.",
+      stack: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "RBAC", "REST API"],
+      demoUrl: "https://kritzz-23.github.io/PulseHR-MERN/",
+      githubUrl: "https://github.com/Kritzz-23/PulseHR-MERN",
+      overview: "A comprehensive enterprise system managing 245 employees across 5 core departments with real-time attendance, leave approval workflows, task delegation, and executive headcount analytics.",
+      architecture: "React client with Axios communicating with Express/Node RESTful API, MongoDB Mongoose schema validation, hierarchical JWT permission guards, and real-time SVG analytics.",
+      codeSnippet: `// PulseHR — Hierarchical RBAC Authorization Middleware
+const ROLE_HIERARCHY = { admin: 4, hr: 3, manager: 2, employee: 1 };
+
+exports.checkHierarchy = (minRole) => {
+  return (req, res, next) => {
+    const userLevel = ROLE_HIERARCHY[req.user.role] || 0;
+    const requiredLevel = ROLE_HIERARCHY[minRole] || 1;
+
+    if (userLevel < requiredLevel) {
+      return res.status(403).json({
+        success: false,
+        message: \`Forbidden: Insufficient privileges. Minimum role: \${minRole.toUpperCase()}\`
+      });
+    }
+    next();
+  };
+};`,
+      metrics: [
+        "Scale tested for 245+ employees across 5 departments",
+        "Hierarchical 4-role RBAC security matrix with JWT tokens",
+        "Real-time clock-in/out attendance with timestamp verification"
+      ]
+    },
+    {
       id: "ai-contract-risk-analyzer",
       title: "AI Contract Risk Analyzer",
       category: "fullstack",

@@ -329,6 +329,31 @@
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+          <!-- Card 0: PulseHR MERN -->
+          <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                <span style="font-size: 1.3rem;">🏢</span>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #059669; background: #ECFDF5; padding: 2px 8px; border-radius: 999px;">● 200 OK &bull; LIVE</span>
+              </div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; color: var(--text-main);">PulseHR (MERN Stack)</h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; line-height: 1.4;">
+                Enterprise HRMS with 245 employees, hierarchical RBAC (Admin/HR/Manager/Employee), real-time attendance, and leave workflows.
+              </p>
+              <div style="margin-top: 8px; font-size: 0.76rem; color: #0284C7; font-weight: 600;">
+                🔑 Role: 4-Tier RBAC (1-Click Switcher)
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; margin-top: 4px;">
+              <a href="https://kritzz-23.github.io/PulseHR-MERN/" target="_blank" rel="noopener noreferrer" class="btn btn-live btn-sm" style="flex: 1; text-align: center;">
+                Launch Live App 🚀
+              </a>
+              <a href="https://github.com/Kritzz-23/PulseHR-MERN" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Repository">
+                🐙 Code
+              </a>
+            </div>
+          </div>
+
           <!-- Card 1: SentinelAI -->
           <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
             <div>
@@ -441,6 +466,47 @@
 
       <!-- Projects Grid (Pre-rendered for instant zero-blank load, filtered by js/main.js) -->
       <div class="projects-grid" id="projects-container">
+        <!-- Project 0: PulseHR MERN -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-media-wrap">
+            <img src="assets/images/project-devflow.jpg" alt="PulseHR — Employee Management &amp; HRMS" loading="lazy">
+            <div class="project-badge-overlay">
+              <span class="featured-pill-tag" style="background: rgba(16, 185, 129, 0.95); color: #fff; padding: 4px 10px; border-radius: 999px;">
+                ● Live on GitHub Pages
+              </span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top-meta">
+              <span class="project-category">MERN Stack Enterprise</span>
+              <span class="project-stars">★ Live App</span>
+            </div>
+            <h3 class="project-title">PulseHR — Employee Management &amp; HRMS</h3>
+            <p class="project-desc">
+              Industry-grade MERN Stack HRMS managing 245 employees across 5 departments. Features 4-tier hierarchical RBAC (Admin, HR, Manager, Employee), real-time attendance, leave approval workflows, and company analytics.
+            </p>
+            <div class="project-stack">
+              <span class="tech-chip">React</span>
+              <span class="tech-chip">Node.js</span>
+              <span class="tech-chip">Express.js</span>
+              <span class="tech-chip">MongoDB</span>
+              <span class="tech-chip">JWT</span>
+              <span class="tech-chip">RBAC</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://kritzz-23.github.io/PulseHR-MERN/" target="_blank" rel="noopener noreferrer" class="btn btn-live btn-sm" style="flex: 1;">
+                Live App 🚀
+              </a>
+              <button class="btn btn-primary btn-sm open-modal-btn" data-id="pulsehr-mern">
+                Architecture &amp; Specs ↗
+              </button>
+              <a href="https://github.com/Kritzz-23/PulseHR-MERN" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Repository on GitHub">
+                GitHub ⚡
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- Project 1: AI Contract Risk Analyzer -->
         <div class="project-card" data-category="fullstack">
           <div class="project-media-wrap">
