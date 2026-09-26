@@ -33,22 +33,99 @@ var PORTFOLIO_DATA = {
   },
 
   skills: [
-    // Python & AI / ML
-    { name: "Python", category: "backend", level: 96, icon: "🐍", tags: ["OOP", "AsyncIO", "FastAPI", "Pandas", "NumPy"] },
-    { name: "Machine Learning", category: "backend", level: 91, icon: "🤖", tags: ["Model Training", "Scikit-Learn", "Evaluation", "Pipelines"] },
-    { name: "NLP & Transformers", category: "backend", level: 89, icon: "📑", tags: ["Tokenization", "Text Classification", "NER", "Embeddings"] },
-    { name: "Data Analysis", category: "backend", level: 90, icon: "📊", tags: ["Feature Extraction", "Clustering", "Statistical Modeling"] },
+    // Languages & Backend
+    { 
+      name: "Python", 
+      category: "backend", 
+      tier: "Advanced Production", 
+      level: 95, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11.91 2C6.98 2 7.31 4.14 7.31 4.14L7.32 6.35H12V7.07H5.21C5.21 7.07 2 6.7 2 11.66C2 16.63 4.8 16.42 4.8 16.42H6.46V14.12C6.46 14.12 6.37 11.35 9.19 11.35H13.84C13.84 11.35 16.48 11.45 16.48 8.9V4.14C16.48 4.14 16.92 2 11.91 2ZM9.62 3.51C10.22 3.51 10.71 4 10.71 4.6C10.71 5.2 10.22 5.69 9.62 5.69C9.02 5.69 8.53 5.2 8.53 4.6C8.53 4 9.02 3.51 9.62 3.51Z" fill="#3776AB"/><path d="M12.09 22C17.02 22 16.69 19.86 16.69 19.86L16.68 17.65H12V16.93H18.79C18.79 16.93 22 17.3 22 12.34C22 7.37 19.2 7.58 19.2 7.58H17.54V9.88C17.54 9.88 17.63 12.65 14.81 12.65H10.16C10.16 12.65 7.52 12.55 7.52 15.1V19.86C7.52 19.86 7.08 22 12.09 22ZM14.38 20.49C13.78 20.49 13.29 20 13.29 19.4C13.29 18.8 13.78 18.31 14.38 18.31C14.98 18.31 15.47 18.8 15.47 19.4C15.47 20 14.98 20.49 14.38 20.49Z" fill="#FFD43B"/></svg>`,
+      tags: ["FastAPI", "AsyncIO", "OOP", "Pandas", "NumPy"] 
+    },
+    { 
+      name: "JavaScript (ES6+)", 
+      category: "frontend", 
+      tier: "Core Competency", 
+      level: 92, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 18.5c1.2.7 2.6 1.1 4 1.1 3.5 0 5.5-1.9 5.5-4.7 0-2.4-1.5-3.6-4.1-4.7l-1-.4c-1.6-.7-2.3-1.3-2.3-2.3 0-1.1 1-1.9 2.5-1.9 1.2 0 2.2.4 3 1l.8-2c-1.1-.7-2.4-1-3.8-1-3.1 0-5.1 1.8-5.1 4.5 0 2.2 1.4 3.4 3.9 4.5l1 .4c1.7.7 2.5 1.5 2.5 2.5 0 1.3-1.1 2.2-2.9 2.2-1.5 0-2.8-.5-3.8-1.2l-.7 2z" fill="#000"/></svg>`,
+      tags: ["Async/Await", "DOM Engine", "State Patterns", "ESNext"] 
+    },
+    { 
+      name: "React.js", 
+      category: "frontend", 
+      tier: "Advanced Production", 
+      level: 90, 
+      svg: `<svg width="22" height="22" viewBox="-11.5 -10.23174 23 20.46348" fill="none"><circle cx="0" cy="0" r="2.05" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1.2" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>`,
+      tags: ["Hooks", "Context API", "Architecture", "Vite"] 
+    },
+    { 
+      name: "REST APIs & Protocols", 
+      category: "backend", 
+      tier: "Advanced Production", 
+      level: 94, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#009688"/><path d="M12 4L6 14h5l-1 6 7-11h-5l1-5z" fill="#FFFFFF"/></svg>`,
+      tags: ["RESTful Design", "JWT Auth", "CORS", "FastAPI"] 
+    },
 
-    // Frontend & Web
-    { name: "JavaScript (ES6+)", category: "frontend", level: 93, icon: "🟨", tags: ["Async/Await", "DOM", "State Management", "ESNext"] },
-    { name: "React.js", category: "frontend", level: 89, icon: "⚛️", tags: ["Hooks", "Context API", "Component Architecture", "Vite"] },
-    { name: "HTML5 & Modern CSS3", category: "frontend", level: 97, icon: "🌐", tags: ["Semantic HTML", "Flexbox/Grid", "Responsive", "Glassmorphism"] },
+    // AI, ML & NLP
+    { 
+      name: "Machine Learning", 
+      category: "backend", 
+      tier: "Specialized", 
+      level: 88, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="5" cy="18" r="2"/><line x1="12" x2="17.5" y1="9" y2="7"/><line x1="12" x2="6.5" y1="9" y2="7"/><line x1="12" x2="17.5" y1="15" y2="17"/><line x1="12" x2="6.5" y1="15" y2="17"/></svg>`,
+      tags: ["Model Training", "Scikit-Learn", "Evaluation", "Pipelines"] 
+    },
+    { 
+      name: "NLP & Transformers", 
+      category: "backend", 
+      tier: "Specialized", 
+      level: 88, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>`,
+      tags: ["Tokenization", "Text Classification", "NER", "Embeddings"] 
+    },
+    { 
+      name: "Data Analysis", 
+      category: "backend", 
+      tier: "Core Competency", 
+      level: 90, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/><line x1="2" x2="22" y1="20" y2="20"/></svg>`,
+      tags: ["Feature Extraction", "Clustering", "Statistical Models"] 
+    },
 
-    // DevOps & Systems
-    { name: "SQL & Relational DBs", category: "devops", level: 89, icon: "🗄️", tags: ["PostgreSQL", "SQLite", "Schema Design", "Indexing"] },
-    { name: "Git & GitHub CI/CD", category: "devops", level: 95, icon: "🐙", tags: ["Branching", "Workflows", "GitHub Pages", "Rebase"] },
-    { name: "REST APIs & Protocols", category: "backend", level: 94, icon: "🔌", tags: ["API Design", "Postman", "CORS", "Authentication"] },
-    { name: "Docker & Linux", category: "devops", level: 84, icon: "🐳", tags: ["Containers", "CLI", "Shell Scripting", "System Administration"] }
+    // Databases & DevOps
+    { 
+      name: "SQL & Relational DBs", 
+      category: "devops", 
+      tier: "Core Competency", 
+      level: 89, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`,
+      tags: ["PostgreSQL", "SQLite", "Schema Design", "Indexing"] 
+    },
+    { 
+      name: "Git & GitHub CI/CD", 
+      category: "devops", 
+      tier: "Advanced Production", 
+      level: 95, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="#F05032"><path d="M21.62 10.84 13.16 2.38a1.64 1.64 0 0 0-2.32 0L8.46 4.76l2.94 2.94a1.95 1.95 0 0 1 2.47 2.5l2.84 2.84a1.94 1.94 0 1 1-1.16 1.12l-2.65-2.65v3.42a1.94 1.94 0 1 1-1.64-.04v-4.66a1.95 1.95 0 0 1-1.07-2.55L7.29 4.78 2.38 9.69a1.64 1.64 0 0 0 0 2.32l8.46 8.46c.64.64 1.68.64 2.32 0l8.46-8.46a1.64 1.64 0 0 0 0-2.32z"/></svg>`,
+      tags: ["Branching", "Workflows", "GitHub Pages", "Rebase"] 
+    },
+    { 
+      name: "Docker & Linux", 
+      category: "devops", 
+      tier: "Core Competency", 
+      level: 85, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="#0DB7ED"><path d="M13.98 10.98h1.86v1.86h-1.86v-1.86zm-2.48 0h1.86v1.86h-1.86v-1.86zm-2.48 0h1.86v1.86H9.02v-1.86zm7.44-2.48h1.86v1.86h-1.86V8.5zm-2.48 0h1.86v1.86h-1.86V8.5zm-2.48 0h1.86v1.86h-1.86V8.5zm-2.48 0h1.86v1.86H9.02V8.5zm4.96-2.48h1.86v1.86h-1.86V6.02zm-2.48 0h1.86v1.86h-1.86V6.02zm12.35 6.94c-.45-.34-1.42-.4-2.18-.18-.13-.74-.53-1.4-1.12-1.89l-.53-.41-.42.52c-.44.55-.66 1.25-.66 1.96 0 .34.05.67.16.98-.37.21-.92.35-1.57.38H1.36c-.4 1.83.07 3.73 1.28 5.17 1.48 1.76 3.69 2.76 6.01 2.76 7.02 0 12.18-4.49 13.62-9.29h.03c.57 0 1.13-.13 1.65-.38l.68-.33-.65-.78z"/></svg>`,
+      tags: ["Containers", "CLI", "Shell Scripting", "System Admin"] 
+    },
+    { 
+      name: "HTML5 & Modern CSS3", 
+      category: "frontend", 
+      tier: "Advanced Production", 
+      level: 95, 
+      svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#E34F26"/><path d="M5 4l1.5 15 5.5 1.5 5.5-1.5 1.5-15H5zm12.3 4.2h-7.8l.2 2.3h7.4l-.5 5.4-4.6 1.3-4.6-1.3-.3-3.3h2.3l.2 1.6 2.4.6 2.4-.6.2-2.7H8.6l-.6-6.6h9.5l-.2 3.3z" fill="#FFFFFF"/></svg>`,
+      tags: ["Semantic HTML", "Flexbox/Grid", "Responsive", "UI Tokens"] 
+    }
   ],
 
   projects: [
@@ -402,20 +479,20 @@ class ExpenseLedger {
 
   // Command Palette Items
   commands: [
-    { id: "sentinel-live", title: "Launch SentinelAI Live Application", category: "Live Applications", icon: "🚀", action: "url", url: "https://kritzz-23.github.io/SentinelAI/" },
-    { id: "risk-live", title: "Launch AI Contract Risk Analyzer", category: "Live Applications", icon: "⚖️", action: "url", url: "https://kritzz-23.github.io/ai-contract-risk-analyzer/" },
-    { id: "intern-live", title: "Launch InternIntel AI Platform", category: "Live Applications", icon: "🎓", action: "url", url: "https://kritzz-23.github.io/InternIntel-AI/" },
-    { id: "expense-live", title: "Launch Smart Expense Tracker", category: "Live Applications", icon: "💳", action: "url", url: "https://kritzz-23.github.io/expense-tracker/" },
-    { id: "jump-architecture", title: "System Architecture & Request Simulator", category: "Navigation", icon: "⚡", action: "scroll", target: "#architecture" },
-    { id: "jump-projects", title: "View Shipped Projects & Applications", category: "Navigation", icon: "📂", action: "scroll", target: "#projects" },
-    { id: "jump-nlp", title: "Live NLP Contract Risk Playground", category: "Navigation", icon: "📑", action: "scroll", target: "#nlp-demo" },
-    { id: "jump-skills", title: "Technical Skills & Stack Matrix", category: "Navigation", icon: "💻", action: "scroll", target: "#skills" },
-    { id: "jump-about", title: "About Me & Engineering Philosophy", category: "Navigation", icon: "👤", action: "scroll", target: "#about" },
-    { id: "jump-education", title: "Academic Background & Brainware University", category: "Navigation", icon: "🎓", action: "scroll", target: "#education" },
-    { id: "jump-contact", title: "Get in Touch & Send Message", category: "Navigation", icon: "✉️", action: "scroll", target: "#contact" },
-    { id: "copy-email", title: "Copy Email: girikritika30@gmail.com", category: "Quick Action", icon: "📋", action: "copy_email" },
-    { id: "open-github", title: "Open GitHub Profile (@Kritzz-23)", category: "Quick Launch", icon: "🐙", action: "url", url: "https://github.com/Kritzz-23" },
-    { id: "open-linkedin", title: "Open LinkedIn Profile", category: "Quick Launch", icon: "💼", action: "url", url: "https://www.linkedin.com/in/kritika-giri-2320aa345/" }
+    { id: "sentinel-live", title: "Launch SentinelAI Live Application", category: "Live Applications", icon: "●", action: "url", url: "https://kritzz-23.github.io/SentinelAI/" },
+    { id: "risk-live", title: "Launch AI Contract Risk Analyzer", category: "Live Applications", icon: "●", action: "url", url: "https://kritzz-23.github.io/ai-contract-risk-analyzer/" },
+    { id: "intern-live", title: "Launch InternIntel AI Platform", category: "Live Applications", icon: "●", action: "url", url: "https://kritzz-23.github.io/InternIntel-AI/" },
+    { id: "expense-live", title: "Launch Smart Expense Tracker", category: "Live Applications", icon: "●", action: "url", url: "https://kritzz-23.github.io/expense-tracker/" },
+    { id: "jump-architecture", title: "System Architecture & Request Simulator", category: "Navigation", icon: "›", action: "scroll", target: "#architecture" },
+    { id: "jump-projects", title: "View Shipped Projects & Applications", category: "Navigation", icon: "›", action: "scroll", target: "#projects" },
+    { id: "jump-nlp", title: "Live NLP Contract Risk Playground", category: "Navigation", icon: "›", action: "scroll", target: "#nlp-demo" },
+    { id: "jump-skills", title: "Technical Skills & Stack Matrix", category: "Navigation", icon: "›", action: "scroll", target: "#skills" },
+    { id: "jump-about", title: "About Me & Engineering Philosophy", category: "Navigation", icon: "›", action: "scroll", target: "#about" },
+    { id: "jump-education", title: "Academic Background & Brainware University", category: "Navigation", icon: "›", action: "scroll", target: "#education" },
+    { id: "jump-contact", title: "Get in Touch & Send Message", category: "Navigation", icon: "›", action: "scroll", target: "#contact" },
+    { id: "copy-email", title: "Copy Email: girikritika30@gmail.com", category: "Quick Action", icon: "⌘", action: "copy_email" },
+    { id: "open-github", title: "Open GitHub Profile (@Kritzz-23)", category: "Quick Launch", icon: "↗", action: "url", url: "https://github.com/Kritzz-23" },
+    { id: "open-linkedin", title: "Open LinkedIn Profile", category: "Quick Launch", icon: "↗", action: "url", url: "https://www.linkedin.com/in/kritika-giri-2320aa345/" }
   ],
 
   // Interactive Architecture Pipeline Nodes
