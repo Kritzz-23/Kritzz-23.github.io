@@ -332,12 +332,12 @@ function initProjects() {
       const card = document.createElement('div');
       card.className = 'project-card';
 
-      const isLiveSentinel = proj.id === 'sentinelai' || (proj.demoUrl && proj.demoUrl.includes('SentinelAI'));
+      const isLive = proj.demoUrl && proj.demoUrl.startsWith('http') && proj.demoUrl !== proj.githubUrl;
 
       card.innerHTML = `
         <div class="project-media-wrap">
           <img src="${proj.image}" alt="${proj.title}" loading="lazy">
-          ${isLiveSentinel ? `
+          ${isLive ? `
             <div class="project-badge-overlay">
               <span class="featured-pill-tag" style="background: rgba(16, 185, 129, 0.95); color: #fff; padding: 4px 10px; border-radius: 999px;">
                 ● Live on GitHub Pages
@@ -348,7 +348,7 @@ function initProjects() {
         <div class="project-body">
           <div class="project-top-meta">
             <span class="project-category">${proj.categoryLabel || proj.category.toUpperCase()}</span>
-            <span class="project-stars">★ ${proj.stars || 'Featured'}</span>
+            <span class="project-stars">★ ${proj.stars || 'Live App'}</span>
           </div>
           <h3 class="project-title">${proj.title}</h3>
           <p class="project-desc">${proj.description}</p>
@@ -356,12 +356,12 @@ function initProjects() {
             ${proj.stack.map(s => `<span class="tech-chip">${s}</span>`).join('')}
           </div>
           <div class="project-actions">
-            ${isLiveSentinel ? `
+            ${isLive ? `
               <a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-live btn-sm" style="flex: 1;">
                 Live App 🚀
               </a>
             ` : ''}
-            <button class="btn btn-primary btn-sm open-modal-btn" data-id="${proj.id}" style="${isLiveSentinel ? '' : 'flex: 1;'}">
+            <button class="btn btn-primary btn-sm open-modal-btn" data-id="${proj.id}" style="${isLive ? '' : 'flex: 1;'}">
               Architecture &amp; Specs ↗
             </button>
             <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Repository on GitHub">
