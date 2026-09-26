@@ -47,12 +47,12 @@
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav>
+      <nav class="nav-center-wrapper">
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#architecture" class="nav-link">Architecture</a></li>
-          <li><a href="#nlp-demo" class="nav-link">Live NLP Demo</a></li>
+          <li><a href="#nlp-demo" class="nav-link">NLP Demo</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -61,17 +61,24 @@
 
       <!-- Header Actions -->
       <div class="header-actions">
-        <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View LinkedIn Profile">
-          LinkedIn 💼
-        </a>
-        <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Profile (@Kritzz-23)">
-          GitHub 🐙
-        </a>
+        <div class="social-links-group">
+          <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="GitHub Profile (@Kritzz-23)" aria-label="GitHub">
+            <span class="nav-btn-icon">🐙</span>
+            <span class="nav-btn-text">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+            <span class="nav-btn-icon">💼</span>
+            <span class="nav-btn-text">LinkedIn</span>
+          </a>
+        </div>
+
         <button class="cmd-trigger-btn" id="cmd-palette-btn" aria-label="Open Command Palette" title="Command Palette (Ctrl + K)">
           <span class="cmd-kbd">⌘K</span>
           <span class="cmd-label">Quick Actions</span>
         </button>
-        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Get in Touch</a>
+
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation">
           <span></span>
           <span></span>
@@ -90,10 +97,14 @@
         <!-- Left: Introduction & Credentials -->
         <div class="hero-text-content">
           <div class="hero-status-pill">
-            <span class="status-dot"></span>
-            <span id="hero-live-time" style="font-family: var(--font-mono); font-size: 0.78rem;">Kolkata, IN: 16:58 IST</span>
-            <span style="opacity: 0.4;">&bull;</span>
-            <span>4th-Year Undergraduate &bull; Brainware University (CGPA 8.54)</span>
+            <span class="status-indicator">
+              <span class="status-dot"></span>
+              <span style="font-weight: 600; color: #047857;">Available for Opportunities</span>
+            </span>
+            <span style="opacity: 0.35;">&bull;</span>
+            <span id="hero-live-time" style="font-family: var(--font-mono); font-size: 0.80rem;">Kolkata, IN: 16:58 IST</span>
+            <span style="opacity: 0.35;">&bull;</span>
+            <span>Brainware University &bull; B.Tech Final Year (CGPA 8.54)</span>
           </div>
 
           <h1 class="hero-name">Kritika Giri</h1>
@@ -1143,37 +1154,21 @@
             </div>
           </a>
 
-          <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
-            <div class="contact-channel-icon">🚀</div>
+          <div class="contact-channel-card" style="cursor: default;">
+            <div class="contact-channel-icon">📍</div>
             <div>
-              <div class="contact-channel-label">SentinelAI Live Application</div>
-              <div class="contact-channel-val">kritzz-23.github.io/SentinelAI/</div>
+              <div class="contact-channel-label">Location &amp; Availability</div>
+              <div class="contact-channel-val">Kolkata, India &bull; Open for Remote &amp; Relocation</div>
             </div>
-          </a>
+          </div>
 
-          <a href="https://kritzz-23.github.io/ai-contract-risk-analyzer/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
-            <div class="contact-channel-icon">⚖️</div>
+          <div class="contact-channel-card" style="cursor: default;">
+            <div class="contact-channel-icon">⚡</div>
             <div>
-              <div class="contact-channel-label">AI Contract Risk Analyzer Live</div>
-              <div class="contact-channel-val">kritzz-23.github.io/ai-contract-risk-analyzer/</div>
+              <div class="contact-channel-label">Status &amp; Response</div>
+              <div class="contact-channel-val">Available for Full-Time Roles &bull; Fast Response</div>
             </div>
-          </a>
-
-          <a href="https://kritzz-23.github.io/InternIntel-AI/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
-            <div class="contact-channel-icon">🎓</div>
-            <div>
-              <div class="contact-channel-label">InternIntel AI Platform Live</div>
-              <div class="contact-channel-val">kritzz-23.github.io/InternIntel-AI/</div>
-            </div>
-          </a>
-
-          <a href="https://kritzz-23.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
-            <div class="contact-channel-icon">💳</div>
-            <div>
-              <div class="contact-channel-label">Smart Expense Tracker Live</div>
-              <div class="contact-channel-val">kritzz-23.github.io/expense-tracker/</div>
-            </div>
-          </a>
+          </div>
         </div>
 
         <!-- Right: Message Form -->
@@ -1215,12 +1210,13 @@
       </div>
       <div class="footer-links">
         <a href="#hero">Back to Top ↑</a>
-        <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer">SentinelAI</a>
-        <a href="https://kritzz-23.github.io/ai-contract-risk-analyzer/" target="_blank" rel="noopener noreferrer">Contract Risk</a>
-        <a href="https://kritzz-23.github.io/InternIntel-AI/" target="_blank" rel="noopener noreferrer">InternIntel</a>
-        <a href="https://kritzz-23.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer">Expense Tracker</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer">GitHub 🐙</a>
+        <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer">LinkedIn 💼</a>
       </div>
     </div>
   </footer>
