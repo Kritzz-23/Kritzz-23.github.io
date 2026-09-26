@@ -53,13 +53,34 @@ const PORTFOLIO_DATA = {
 
   projects: [
     {
+      id: "sentinelai",
+      title: "SentinelAI",
+      category: "backend",
+      categoryLabel: "Incident Command & Telemetry",
+      stars: "Live App",
+      orbitBadge: "ORBITAL NODE 01",
+      image: "assets/images/project-sentinel.jpg",
+      description: "AI-powered real-time incident intelligence platform with automated log clustering, deterministic root cause analysis (RCA), and synthetic outage injection.",
+      stack: ["Python", "FastAPI", "Telemetry", "Docker", "Machine Learning", "ESNext"],
+      demoUrl: "https://kritzz-23.github.io/SentinelAI/",
+      githubUrl: "https://github.com/Kritzz-23/SentinelAI",
+      overview: "Engineered to drastically cut Mean Time to Resolution (MTTR) in high-throughput distributed systems. It correlates high-frequency error traces, filters ambient noise, detects root causes with confidence scoring, and streams microservices logs in real-time.",
+      architecture: "In-browser & containerized deterministic AI diagnostic engine matching FastAPI heuristics, featuring log streaming, severity filtering, and live chaos engineering simulations.",
+      metrics: [
+        "Live interactive production app hosted on GitHub Pages",
+        "Reduces debugging MTTR by identifying recurrent anomaly clusters",
+        "Deterministic confidence scoring and remediation runbook generator"
+      ]
+    },
+    {
       id: "ai-contract-risk-analyzer",
       title: "AI Contract Risk Analyzer",
       category: "fullstack",
-      categoryLabel: "NLP / Machine Learning",
+      categoryLabel: "NLP / Legal AI",
       stars: "Featured",
-      image: "assets/images/project-devflow.jpg",
-      description: "Applied AI legal risk platform utilizing Natural Language Processing (NLP) to detect high-liability clauses, unbounded indemnities, and critical compliance vulnerabilities in commercial contracts.",
+      orbitBadge: "ORBITAL NODE 02",
+      image: "assets/images/project-risk.jpg",
+      description: "Applied AI legal risk platform utilizing Natural Language Processing (NLP) to detect high-liability clauses, unbounded indemnities, and critical compliance vulnerabilities.",
       stack: ["Python", "NLP", "Machine Learning", "Transformers", "FastAPI", "HTML5/CSS3"],
       demoUrl: "https://github.com/Kritzz-23/ai-contract-risk-analyzer",
       githubUrl: "https://github.com/Kritzz-23/ai-contract-risk-analyzer",
@@ -75,11 +96,12 @@ const PORTFOLIO_DATA = {
       id: "internintel-ai",
       title: "InternIntel AI",
       category: "fullstack",
-      categoryLabel: "Full Stack & AI",
+      categoryLabel: "Career & Matching AI",
       stars: "Featured",
+      orbitBadge: "ORBITAL NODE 03",
       image: "assets/images/project-novacommerce.jpg",
       description: "An intelligent platform designed to help students discover, manage, and match internship opportunities through automated text parsing, semantic skill matching, and deadline tracking.",
-      stack: ["Python", "JavaScript", "SQL", "REST API", "Tailwind CSS"],
+      stack: ["Python", "JavaScript", "SQL", "REST API", "Responsive UI"],
       demoUrl: "https://github.com/Kritzz-23/InternIntel-AI",
       githubUrl: "https://github.com/Kritzz-23/InternIntel-AI",
       overview: "Bridges the technical student-to-internship gap by intelligently organizing internship postings, scoring applicant skill profiles against role expectations, and organizing application lifecycles.",
@@ -91,30 +113,12 @@ const PORTFOLIO_DATA = {
       ]
     },
     {
-      id: "sentinelai",
-      title: "SentinelAI",
-      category: "backend",
-      categoryLabel: "Observability & AI",
-      stars: "Featured",
-      image: "assets/images/project-cloudmetrics.jpg",
-      description: "AI-powered incident intelligence platform that ingests server logs, clusters error traces, and surfaces actionable diagnostic insights for accelerated engineering triage.",
-      stack: ["Python", "Log Analytics", "Anomaly Detection", "Docker", "REST API"],
-      demoUrl: "https://kritzz-23.github.io/SentinelAI/",
-      githubUrl: "https://github.com/Kritzz-23/SentinelAI",
-      overview: "Engineered to drastically cut Mean Time to Resolution (MTTR) in distributed server clusters. It correlates high-frequency error traces, filters ambient log noise, and highlights anomalous failure paths.",
-      architecture: "Streamlined log ingestion pipeline with rule-based filters and clustering algorithms designed for low-latency operational telemetry.",
-      metrics: [
-        "Reduces debugging MTTR by identifying recurrent anomaly clusters",
-        "Suppresses up to 80% of repetitive ambient log noise",
-        "Lightweight, container-ready deployment footprint"
-      ]
-    },
-    {
       id: "expense-tracker",
       title: "Smart Expense Tracker",
       category: "frontend",
-      categoryLabel: "Web App / Finance",
+      categoryLabel: "Personal Finance",
       stars: "Featured",
+      orbitBadge: "ORBITAL NODE 04",
       image: "assets/images/project-cloudmetrics.jpg",
       description: "A responsive, accessible personal finance web application for managing, categorizing, and tracking personal expenses with client-side persistent storage and real-time visualization.",
       stack: ["JavaScript", "HTML5", "CSS3", "Local Storage", "Responsive UI"],
@@ -126,6 +130,46 @@ const PORTFOLIO_DATA = {
         "100% offline-ready with instant persistent data retrieval",
         "Sub-10ms UI interaction latency",
         "Fully responsive layout optimized from mobile to ultra-wide displays"
+      ]
+    },
+    {
+      id: "devflow-gateway",
+      title: "DevFlow Cloud API Gateway",
+      category: "backend",
+      categoryLabel: "Distributed Infrastructure",
+      stars: "Featured",
+      orbitBadge: "ORBITAL NODE 05",
+      image: "assets/images/project-devflow.jpg",
+      description: "High-throughput asynchronous API gateway providing rate limiting, JWT token validation, circuit breaking, and distributed request routing.",
+      stack: ["Python", "FastAPI", "Redis", "Docker", "AsyncIO", "OAuth2"],
+      demoUrl: "https://github.com/Kritzz-23",
+      githubUrl: "https://github.com/Kritzz-23",
+      overview: "Designed to handle concurrent microservice routing with built-in token-bucket rate limiting, SSL termination, and distributed telemetry collection.",
+      architecture: "Asynchronous Python worker mesh coupled with in-memory caching and resilient circuit breaker triggers.",
+      metrics: [
+        "Sustains high RPS with sub-5ms routing overhead",
+        "Automated circuit breaker preventing cascading downstream failures",
+        "Zero-downtime health probing and graceful degradation"
+      ]
+    },
+    {
+      id: "neural-cloudmetrics",
+      title: "CloudMetrics Neural Telemetry",
+      category: "devops",
+      categoryLabel: "Observability & ML",
+      stars: "Featured",
+      orbitBadge: "ORBITAL NODE 06",
+      image: "assets/images/neural-architecture.jpg",
+      description: "Distributed telemetry aggregator and neural metric anomaly detector parsing multidimensional time-series cloud performance metrics.",
+      stack: ["Python", "NumPy", "Time-Series", "WebSockets", "Docker", "Charts"],
+      demoUrl: "https://github.com/Kritzz-23",
+      githubUrl: "https://github.com/Kritzz-23",
+      overview: "Aggregates CPU, memory, I/O, and network ingress spikes across multi-zone infrastructure to predict node degradation prior to failure.",
+      architecture: "Lightweight statistical and sliding-window anomaly detector streaming real-time alerts over WebSocket pipelines.",
+      metrics: [
+        "Early warning detection 12 minutes prior to threshold saturation",
+        "Ultra-lightweight agent deployment footprint (<15MB RAM)",
+        "Real-time WebSocket telemetry push"
       ]
     }
   ],
