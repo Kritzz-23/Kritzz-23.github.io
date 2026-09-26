@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-accent="violet">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Primary Meta Tags -->
-  <title>Kritika Giri — Full Stack Developer | Portfolio</title>
-  <meta name="title" content="Kritika Giri — Full Stack Developer | Portfolio">
-  <meta name="description" content="Portfolio of Kritika Giri (@Kritzz-23) — Full Stack Developer specializing in Python, React, JavaScript, FastAPI, SQL, and modern scalable web applications. Brainware University, Kolkata (CGPA 8.54).">
-  <meta name="keywords" content="Kritika Giri, Kritzz-23, Full Stack Developer, Software Engineer, Python, React, FastAPI, JavaScript, Portfolio, Kolkata">
+  <title>Kritika Giri — Full Stack Developer</title>
+  <meta name="title" content="Kritika Giri — Full Stack Developer">
+  <meta name="description" content="Portfolio of Kritika Giri (@Kritzz-23) — Full Stack Developer specializing in React, Python, FastAPI, SQL, and modern web applications. 4th-Year Undergraduate at Brainware University, Kolkata (CGPA 8.54).">
+  <meta name="keywords" content="Kritika Giri, Kritzz-23, Full Stack Developer, Software Engineer, Python, React, FastAPI, JavaScript, Kolkata, Brainware University">
   <meta name="author" content="Kritika Giri">
 
   <!-- Open Graph / Meta -->
@@ -17,829 +17,506 @@
   <meta property="og:url" content="https://kritzz-23.github.io/">
   <meta property="og:title" content="Kritika Giri — Full Stack Developer">
   <meta property="og:description" content="Full Stack Web Development, Scalable APIs, and Applied AI Systems.">
-  <meta property="og:image" content="assets/images/neural-architecture.jpg">
+  <meta property="og:image" content="assets/images/avatar.jpg">
 
-  <!-- High-End Typography -->
+  <!-- Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2244%22 fill=%22%232563EB%22/><text x=%2250%22 y=%2265%22 font-size=%2242%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>KG</text></svg>">
 </head>
 <body>
 
-  <!-- Ambient Light Fields -->
-  <div class="bg-mesh-glow" aria-hidden="true">
-    <div class="mesh-circle mesh-1"></div>
-    <div class="mesh-circle mesh-2"></div>
-    <div class="mesh-circle mesh-3"></div>
-  </div>
-  <div class="bg-grid-pattern" aria-hidden="true"></div>
-  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-
-  <div class="content-wrapper">
-
-    <!-- Header Navigation -->
-    <header class="header">
-      <div class="container nav-container">
-        <a href="#hero" class="brand-logo" aria-label="Kritika Giri Home">
-          <span class="brand-badge">&lt;KG /&gt;</span>
-          <span class="brand-name">Kritika<span class="brand-dot">.</span>Giri</span>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav>
-          <ul class="nav-menu" id="nav-menu">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#nlp-demo" class="nav-link">Live NLP Demo</a></li>
-            <li><a href="#skills" class="nav-link">Arsenal</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#arch-flow" class="nav-link">Architecture</a></li>
-            <li><a href="#experience" class="nav-link">Education</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-        </nav>
-
-        <!-- Command Palette Trigger & Controls -->
-        <div class="header-actions">
-          <button class="cmd-palette-btn" title="Open Quick Command Palette (Ctrl+K)" aria-label="Command Palette">
-            <span>🔍</span>
-            <span class="cmd-badge">Ctrl + K</span>
-          </button>
-
-          <!-- Accent Dropdown -->
-          <div class="accent-dropdown">
-            <button class="control-btn accent-dots-btn" id="accent-btn" title="Accent Color Theme" aria-label="Accent Palette">
-              <span class="color-dot-indicator"></span>
-            </button>
-            <div class="accent-palette-menu" id="accent-menu">
-              <button class="accent-opt" data-accent="violet">
-                <span class="palette-swatch swatch-violet"></span> Cyber Violet
-              </button>
-              <button class="accent-opt" data-accent="cyan">
-                <span class="palette-swatch swatch-cyan"></span> Neon Cyan
-              </button>
-              <button class="accent-opt" data-accent="emerald">
-                <span class="palette-swatch swatch-emerald"></span> Matrix Green
-              </button>
-              <button class="accent-opt" data-accent="amber">
-                <span class="palette-swatch swatch-amber"></span> Sunset Amber
-              </button>
-            </div>
-          </div>
-
-          <!-- Theme Toggle -->
-          <button class="control-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
-            <span id="theme-icon">☀️</span>
-          </button>
-
-          <!-- Sound Effects -->
-          <button class="control-btn" id="sound-toggle" title="Synthesized Audio Effects" aria-label="Toggle Sound">
-            <span id="sound-icon">🔇</span>
-          </button>
-
-          <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
-
-          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- Hero Section: Executive Silicon Valley Level -->
-      <section class="hero-section" id="hero">
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <div class="hero-status-badge">
-                <span class="status-dot"></span>
-                <span>4th-Year Undergraduate &bull; Brainware University (CGPA 8.54) &bull; Kolkata</span>
-              </div>
-
-              <h1 class="hero-name">Kritika Giri</h1>
-
-              <div class="hero-role-wrapper">
-                <span>Specialized in</span>
-                <span class="typewriter-text" id="typewriter-text"></span>
-              </div>
-
-              <p class="hero-bio">
-                Building resilient <strong>full-stack web applications</strong>, high-performance <strong>backend APIs &amp; databases</strong>, and <strong>applied AI systems</strong>. Combining modern frontend frameworks (React, JavaScript) with scalable backend architectures (Python, FastAPI, SQL) to ship production-ready, sub-second software.
-              </p>
-
-              <!-- Quick Tech Stack Chips -->
-              <div class="hero-tech-pills">
-                <span class="hero-tech-tag">🐍 Python 3.x</span>
-                <span class="hero-tech-tag">📑 NLP Transformers</span>
-                <span class="hero-tech-tag">⚡ FastAPI &amp; REST</span>
-                <span class="hero-tech-tag">⚛️ React &amp; ES6+</span>
-                <span class="hero-tech-tag">🗄️ PostgreSQL / SQL</span>
-                <span class="hero-tech-tag">🐳 Docker &amp; Linux</span>
-              </div>
-
-              <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                  Explore Projects ⚡
-                </a>
-                <a href="#nlp-demo" class="btn btn-secondary">
-                  Test Live NLP Demo 🔬
-                </a>
-                <button class="btn btn-outline" id="open-resume-btn">
-                  View Resume 📄
-                </button>
-              </div>
-
-              <div class="hero-stats-row">
-                <div class="stat-item">
-                  <div class="stat-num">8.54<span>/10</span></div>
-                  <div class="stat-label">Academic CGPA</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-num">4<span>+</span></div>
-                  <div class="stat-label">Shipped Repositories</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-num">99.9<span>%</span></div>
-                  <div class="stat-label">Pipeline Reliability</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-num">2027</div>
-                  <div class="stat-label">Expected Graduation</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hero Visual: System Monitor & Neural Visualizer Window -->
-            <div class="hero-visual">
-              <div class="sys-monitor-window">
-                <div class="sys-monitor-header">
-                  <div class="sys-header-left">
-                    <span class="term-dot dot-red"></span>
-                    <span class="term-dot dot-yellow"></span>
-                    <span class="term-dot dot-green"></span>
-                    <span class="sys-monitor-title">SYSTEM MONITOR &bull; AI PIPELINE v2.4</span>
-                  </div>
-                  <div class="sys-live-badge">
-                    <span class="status-dot" style="width: 6px; height: 6px;"></span> ACTIVE
-                  </div>
-                </div>
-
-                <div class="sys-img-wrap">
-                  <img src="assets/images/neural-architecture.jpg" alt="Neural Network Data Flow and Semantic Visualizer" class="sys-img">
-                </div>
-
-                <div class="sys-footer-stats">
-                  <div class="sys-stat-cell">
-                    <div class="sys-stat-val">12,892</div>
-                    <div class="sys-stat-lbl">Active Nodes</div>
-                  </div>
-                  <div class="sys-stat-cell">
-                    <div class="sys-stat-val">28ms</div>
-                    <div class="sys-stat-lbl">Inference Latency</div>
-                  </div>
-                  <div class="sys-stat-cell">
-                    <div class="sys-stat-val">Healthy</div>
-                    <div class="sys-stat-lbl">Cluster State</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ADVANCED FEATURE 1: Interactive NLP Contract Risk Analyzer Playground -->
-      <section class="section" id="nlp-demo" style="background: rgba(255, 255, 255, 0.015);">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Live System Playground</span>
-            <h2 class="section-title">Interactive NLP <span class="text-gradient">Risk Inference</span></h2>
-            <p class="section-description">
-              Test the real-time contract analysis intelligence engine powering the <strong>AI Contract Risk Analyzer</strong>. Select a clause or paste your own contract excerpt below.
-            </p>
-          </div>
-
-          <div class="playground-wrapper">
-            <div class="playground-header">
-              <div class="playground-title-group">
-                <h3>⚡ Legal Risk Classification Engine</h3>
-                <div class="playground-sub">Transformer attention &bull; 15-class liability taxonomy &bull; Token classification</div>
-              </div>
-
-              <!-- Sample Clauses -->
-              <div class="sample-clauses-nav">
-                <span style="font-size: 0.8rem; color: var(--text-dim); margin-right: 4px;">Preset Clauses:</span>
-                <button class="clause-chip-btn active" data-sample="indemnity">Unlimited Indemnity</button>
-                <button class="clause-chip-btn" data-sample="noncompete">Restrictive Non-Compete</button>
-                <button class="clause-chip-btn" data-sample="confidentiality">Standard NDA</button>
-              </div>
-            </div>
-
-            <!-- Clause Input Editor Box -->
-            <div class="playground-editor-box">
-              <textarea id="nlp-clause-input" class="playground-textarea" spellcheck="false" placeholder="Paste or type a legal contract clause to analyze..."></textarea>
-            </div>
-
-            <div class="playground-action-row">
-              <div style="font-size: 0.82rem; color: var(--text-dim);">
-                💡 Tip: Click <strong>Analyze Risk Pipeline</strong> to execute token extraction and contextual risk scoring.
-              </div>
-              <button class="btn btn-primary" id="nlp-run-btn">
-                Analyze Risk Pipeline ⚡
-              </button>
-            </div>
-
-            <!-- Dynamic Results Card -->
-            <div class="playground-results-card" id="nlp-results-card">
-              <div class="res-metrics-grid">
-                <div class="res-metric-item">
-                  <div class="res-metric-lbl">Identified Category</div>
-                  <div class="res-metric-val" id="nlp-res-category">Indemnification &amp; Unlimited Liability</div>
-                </div>
-                <div class="res-metric-item">
-                  <div class="res-metric-lbl">Risk Assessment</div>
-                  <div class="res-metric-val high-risk" id="nlp-res-score">CRITICAL RISK (94/100)</div>
-                </div>
-                <div class="res-metric-item">
-                  <div class="res-metric-lbl">Inference Latency</div>
-                  <div class="res-metric-val" style="color: #38bdf8;">~32ms</div>
-                </div>
-              </div>
-
-              <div style="font-size: 0.82rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Flagged Dangerous Token Spans:</div>
-              <div class="highlighted-clause-box" id="nlp-res-highlighted">
-                <!-- Highlighted tokens inserted here -->
-              </div>
-
-              <div style="font-size: 0.82rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Recommended Legal Remediation:</div>
-              <div class="remediation-box" id="nlp-res-remediation">
-                <!-- Remediation advice inserted here -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About & Terminal Section -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Engineering Profile</span>
-            <h2 class="section-title">Behind The <span class="text-gradient">Systems</span></h2>
-            <p class="section-description">
-              A synthesis of academic rigor, applied machine learning, and clean software architecture.
-            </p>
-          </div>
-
-          <div class="about-grid">
-            <div class="about-text-content">
-              <!-- Humanized Story Card -->
-              <div class="human-story-card">
-                <div class="human-avatar-frame">
-                  <img src="assets/images/avatar.jpg" alt="Kritika Giri" loading="lazy">
-                </div>
-                <div>
-                  <div class="human-story-quote">
-                    "I believe the best software lives where architectural discipline meets real human empathy. As a final-year developer, my goal is simple: bridge intelligent backend models with fast, accessible web interfaces that people actually enjoy using."
-                  </div>
-                  <div class="human-story-author">
-                    Kritika Giri &bull; 4th-Year Undergraduate (Final Year) &bull; CGPA 8.54 / 10 &bull; Brainware University
-                  </div>
-                </div>
-              </div>
-
-              <p class="lead-p">
-                I am a Full Stack Developer currently pursuing my Bachelor of Technology in Computer Science &amp; Engineering (AI &amp; ML) at Brainware University, Kolkata.
-              </p>
-              <p style="color: var(--text-muted); line-height: 1.7;">
-                My technical philosophy emphasizes applied impact: transforming complex machine learning research into responsive, reliable, and accessible products. Whether it is engineering NLP systems that evaluate legal liabilities or platforms helping students secure technical internships, I prioritize clean code, testability, and sub-second performance.
-              </p>
-
-              <div class="about-features">
-                <div class="feature-box">
-                  <div class="feature-icon">🧠</div>
-                  <div class="feature-title">Applied NLP &amp; Transformers</div>
-                  <div class="feature-desc">Building token classification, semantic clustering, and transformer-based risk detection pipelines.</div>
-                </div>
-                <div class="feature-box">
-                  <div class="feature-icon">💻</div>
-                  <div class="feature-title">Full Stack Systems</div>
-                  <div class="feature-desc">Developing clean web dashboards with Python backends (FastAPI), React, JavaScript, and SQL.</div>
-                </div>
-                <div class="feature-box">
-                  <div class="feature-icon">📊</div>
-                  <div class="feature-title">Academic Distinction</div>
-                  <div class="feature-desc">Maintaining a strong academic foundation with an 8.54 / 10 CGPA across all completed semesters.</div>
-                </div>
-                <div class="feature-box">
-                  <div class="feature-icon">🛡️</div>
-                  <div class="feature-title">Operational Resilience</div>
-                  <div class="feature-desc">Containerized deployments with Docker, structured logging with SentinelAI, and automated CI/CD.</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Interactive Terminal Window -->
-            <div class="terminal-window">
-              <div class="terminal-header">
-                <div class="terminal-dots">
-                  <span class="term-dot dot-red"></span>
-                  <span class="term-dot dot-yellow"></span>
-                  <span class="term-dot dot-green"></span>
-                </div>
-                <div class="terminal-tabs">
-                  <button class="term-tab active" data-tab="kritika.py">kritika.py</button>
-                  <button class="term-tab" data-tab="stack.json">stack.json</button>
-                  <button class="term-tab" data-tab="terminal">terminal 💻</button>
-                </div>
-                <button class="term-action-copy" id="term-copy-btn" title="Copy code snippet">
-                  <span>📋</span> Copy
-                </button>
-              </div>
-
-              <div class="terminal-body">
-                <div id="terminal-code-display"></div>
-
-                <div class="terminal-shell" id="term-shell-pane" style="display: none;">
-                  <div style="color: #64748b; font-size: 0.8rem; margin-bottom: 8px;">
-                    KritikaOS (x86_64-pc-linux-gnu)<br>
-                    Type <span style="color: #34d399;">help</span> to inspect available interactive commands.
-                  </div>
-                  <div class="term-history" id="term-history"></div>
-                  <div class="term-input-row">
-                    <span class="term-prompt">visitor@kritika:~$</span>
-                    <input type="text" class="term-input" id="term-input" placeholder="Type 'help' and press Enter..." autocomplete="off" spellcheck="false">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Technical Arsenal & Skills Matrix -->
-      <section class="section" id="skills" style="background: rgba(255, 255, 255, 0.015);">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Core Competencies</span>
-            <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
-            <p class="section-description">
-              Languages, machine learning architectures, frameworks, and database technologies I leverage daily.
-            </p>
-          </div>
-
-          <div class="skills-controls">
-            <div class="skills-filter-nav">
-              <button class="filter-btn active" data-filter="all">All Disciplines</button>
-              <button class="filter-btn" data-filter="backend">Python &amp; AI / ML</button>
-              <button class="filter-btn" data-filter="frontend">Frontend &amp; Web</button>
-              <button class="filter-btn" data-filter="devops">DevOps &amp; Systems</button>
-            </div>
-
-            <div class="skills-search-wrapper">
-              <span class="skills-search-icon">🔍</span>
-              <input type="text" id="skills-search" class="skills-search-input" placeholder="Search competencies (e.g. Python, NLP, React, SQL)..." aria-label="Search skills">
-            </div>
-          </div>
-
-          <div class="skills-grid" id="skills-grid-container"></div>
-        </div>
-      </section>
-
-      <!-- Featured Projects Section -->
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Case Studies</span>
-            <h2 class="section-title">Featured <span class="text-gradient">Creations</span></h2>
-            <p class="section-description">
-              Production systems solving concrete problems across legal NLP, incident intelligence, and personal finance.
-            </p>
-          </div>
-
-          <div class="projects-filter-bar">
-            <button class="project-pill active" data-filter="all">All Projects (4)</button>
-            <button class="project-pill" data-filter="fullstack">AI &amp; Full Stack</button>
-            <button class="project-pill" data-filter="backend">Observability &amp; Systems</button>
-            <button class="project-pill" data-filter="frontend">Web Applications</button>
-          </div>
-
-          <div class="projects-grid" id="projects-grid-container"></div>
-        </div>
-      </section>
-
-      <!-- ADVANCED FEATURE 2: Interactive System Architecture Flow Explorer -->
-      <section class="section" id="arch-flow" style="background: rgba(255, 255, 255, 0.015);">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Deep Engineering</span>
-            <h2 class="section-title">System Architecture <span class="text-gradient">Pipeline</span></h2>
-            <p class="section-description">
-              Interactive end-to-end data flow for the <strong>AI Contract Risk Analyzer</strong> inference pipeline. Click any node to inspect technical specifications and latency budgets.
-            </p>
-          </div>
-
-          <div class="arch-flow-wrapper">
-            <div class="arch-flow-header">
-              <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-main);">
-                ⚡ High-Throughput Legal NLP Pipeline Execution
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-primary);">
-                Total Pipeline Budget: &lt; 70ms
-              </div>
-            </div>
-
-            <!-- Pipeline Diagram -->
-            <div class="pipeline-diagram-grid">
-              <div class="pipeline-node active" data-node="0">
-                <div class="node-step-badge">STEP 01</div>
-                <div class="node-title">Document Ingest</div>
-                <div class="node-latency">~12ms</div>
-              </div>
-              <div class="pipeline-arrow">&rarr;</div>
-
-              <div class="pipeline-node" data-node="1">
-                <div class="node-step-badge">STEP 02</div>
-                <div class="node-title">Subword Tokenizer</div>
-                <div class="node-latency">~6ms</div>
-              </div>
-              <div class="pipeline-arrow">&rarr;</div>
-
-              <div class="pipeline-node" data-node="2">
-                <div class="node-step-badge">STEP 03</div>
-                <div class="node-title">Transformer Embed</div>
-                <div class="node-latency">~26ms</div>
-              </div>
-              <div class="pipeline-arrow">&rarr;</div>
-
-              <div class="pipeline-node" data-node="3">
-                <div class="node-step-badge">STEP 04</div>
-                <div class="node-title">Multi-Head Classify</div>
-                <div class="node-latency">~18ms</div>
-              </div>
-              <div class="pipeline-arrow">&rarr;</div>
-
-              <div class="pipeline-node" data-node="4">
-                <div class="node-step-badge">STEP 05</div>
-                <div class="node-title">Risk Scoring &amp; UI</div>
-                <div class="node-latency">~8ms</div>
-              </div>
-            </div>
-
-            <!-- Detail Panel -->
-            <div class="node-detail-panel">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                <div class="node-detail-title" id="arch-node-title">Document Ingestion</div>
-                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #10b981;" id="arch-node-latency">Processing Time: ~12ms</div>
-              </div>
-              <div class="node-detail-desc" id="arch-node-desc">
-                Raw document ingestion (PDF, Word, Plaintext) with regex normalization, token stream extraction, and layout-preserving sentence splitting.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education & Academic Standing Timeline -->
-      <section class="section" id="experience">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Academic &amp; Career Track</span>
-            <h2 class="section-title">Education &amp; <span class="text-gradient">Standing</span></h2>
-            <p class="section-description">
-              Formal engineering foundation in Artificial Intelligence &amp; Machine Learning and ongoing software contributions.
-            </p>
-          </div>
-
-          <div class="timeline-container">
-            <div class="timeline-line"></div>
-            <div id="timeline-items-container"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Live GitHub Activity Hub -->
-      <section class="section" id="github-stats" style="background: rgba(255, 255, 255, 0.015);">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Open Source Hub</span>
-            <h2 class="section-title">GitHub <span class="text-gradient">Activity &amp; Metrics</span></h2>
-            <p class="section-description">
-              Live automated telemetry from my GitHub account <strong>@Kritzz-23</strong>.
-            </p>
-          </div>
-
-          <div class="github-hub-wrapper">
-            <div class="gh-user-banner">
-              <div class="gh-user-info">
-                <div class="gh-avatar-small">
-                  <img src="assets/images/avatar.jpg" alt="Kritika Giri">
-                </div>
-                <div class="gh-names">
-                  <h3>Kritika Giri</h3>
-                  <div class="gh-username">@Kritzz-23 &bull; Brainware University</div>
-                </div>
-              </div>
-
-              <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                Open GitHub Profile ↗
-              </a>
-            </div>
-
-            <div class="gh-stats-grid">
-              <div class="gh-stat-card">
-                <img data-stat-type="stats" src="https://github-readme-stats-sigma-five.vercel.app/api?username=Kritzz-23&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=06b6d4" alt="GitHub Stats" loading="lazy">
-              </div>
-
-              <div class="gh-stat-card">
-                <img data-stat-type="languages" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Kritzz-23&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6" alt="Top Languages" loading="lazy">
-              </div>
-
-              <div class="gh-stat-card gh-streak-card">
-                <img data-stat-type="streak" src="https://github-readme-streak-stats.herokuapp.com/?user=Kritzz-23&theme=tokyonight&hide_border=true&background=0d1117&ring=8b5cf6&fire=06b6d4" alt="GitHub Streak" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section" id="contact">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Get in Touch</span>
-            <h2 class="section-title">Let's Build Something <span class="text-gradient">Extraordinary</span></h2>
-            <p class="section-description">
-              Actively seeking software engineering internships, applied AI roles, and high-impact technical collaborations.
-            </p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-info-cards">
-              <div class="contact-card">
-                <div class="contact-icon-box">✉️</div>
-                <div class="contact-card-content">
-                  <h4>Email</h4>
-                  <a href="mailto:girikritika30@gmail.com">girikritika30@gmail.com</a>
-                </div>
-                <button class="contact-copy-btn" id="copy-email-btn" title="Copy email address">Copy</button>
-              </div>
-
-              <div class="contact-card">
-                <div class="contact-icon-box">🐙</div>
-                <div class="contact-card-content">
-                  <h4>GitHub</h4>
-                  <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer">github.com/Kritzz-23</a>
-                </div>
-              </div>
-
-              <div class="contact-card">
-                <div class="contact-icon-box">💼</div>
-                <div class="contact-card-content">
-                  <h4>LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kritika-giri-2320aa345</a>
-                </div>
-              </div>
-
-              <div class="time-status-box">
-                <div class="time-dot"></div>
-                <div class="time-text">
-                  <strong>Location:</strong> Kolkata, India &bull; <span id="live-time-display">Active &amp; Ready to Collaborate</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Contact Form -->
-            <form class="contact-form" id="contact-form">
-              <div class="form-group">
-                <label for="sender-name">Your Name</label>
-                <input type="text" id="sender-name" class="form-control" placeholder="Sarah Connor" required>
-              </div>
-
-              <div class="form-group">
-                <label for="sender-email">Email Address</label>
-                <input type="email" id="sender-email" class="form-control" placeholder="sarah@example.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="sender-subject">Subject</label>
-                <input type="text" id="sender-subject" class="form-control" placeholder="Software Engineering Role / Project Inquiry">
-              </div>
-
-              <div class="form-group">
-                <label for="sender-message">Message</label>
-                <textarea id="sender-message" class="form-control" placeholder="Hello Kritika, I saw your portfolio and would like to discuss..." required></textarea>
-              </div>
-
-              <div class="form-feedback" id="form-feedback"></div>
-
-              <button type="submit" class="btn btn-primary" id="form-submit-btn">
-                Send Message 🚀
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="brand-logo">
-            <span class="brand-badge">&lt;KG /&gt;</span>
-            <span class="brand-name">Kritika Giri</span>
-          </div>
-
-          <div class="footer-socials">
-            <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">🐙</a>
-            <a href="mailto:girikritika30@gmail.com" class="social-link" title="Email">✉️</a>
-            <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">💼</a>
-            <a href="#hero" class="social-link" title="Back to Top">⬆️</a>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          &copy; 2026 Kritika Giri &bull; Brainware University, Kolkata &bull; Hosted on GitHub Pages.
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <!-- COMMAND PALETTE MODAL (Ctrl + K) -->
-  <div class="cmd-palette-backdrop" id="cmd-palette-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
-    <div class="cmd-palette-modal">
-      <div class="cmd-search-header">
-        <span>🔍</span>
-        <input type="text" class="cmd-search-input" id="cmd-palette-input" placeholder="Type a command, project, or section..." autocomplete="off">
-        <span class="cmd-esc-badge">ESC</span>
-      </div>
-      <div class="cmd-results-list" id="cmd-palette-list">
-        <!-- Rendered dynamically -->
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Kritika Giri Home">
+        <span class="brand-badge">&lt;KG /&gt;</span>
+        <span class="brand-name">Kritika Giri</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#nlp-demo" class="nav-link">Live NLP Demo</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="control-btn" id="theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-  </div>
-
-  <!-- Project Details Deep Dive Modal -->
-  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="proj-modal-title">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h3 class="modal-title" id="proj-modal-title">Project Deep Dive</h3>
-        <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
-      </div>
-      <div class="modal-body" id="proj-modal-body"></div>
-    </div>
-  </div>
-
-  <!-- Resume Modal -->
-  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
-    <div class="modal-dialog" style="max-width: 820px;">
-      <div class="modal-header">
-        <h3 class="modal-title" id="resume-modal-title">Curriculum Vitae — Kritika Giri</h3>
-        <div style="display: flex; gap: 10px; align-items: center;">
-          <button class="btn btn-primary btn-sm" id="print-resume-btn">Print / Save PDF 🖨️</button>
-          <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
-        </div>
-      </div>
-      <div class="modal-body">
-        <div class="resume-paper">
-          <div class="resume-header">
-            <h1 class="resume-name">Kritika Giri</h1>
-            <div class="resume-title">Full Stack Developer &amp; Software Engineer</div>
-            <div class="resume-contact-line">
-              <span>✉️ girikritika30@gmail.com</span>
-              <span>🐙 github.com/Kritzz-23</span>
-              <span>💼 linkedin.com/in/kritika-giri-2320aa345</span>
-              <span>📍 Kolkata, India</span>
-            </div>
-          </div>
-
-          <div class="resume-section-title">Executive Summary</div>
-          <p>
-            Undergraduate software engineer in Artificial Intelligence &amp; Machine Learning (AIML) at Brainware University, Kolkata (CGPA: 8.54 / 10). Specialized in designing NLP transformer pipelines, applied machine learning systems, and full-stack web applications with Python, JavaScript, and relational databases.
-          </p>
-
-          <div class="resume-section-title">Education</div>
-          <div style="display: flex; justify-content: space-between; font-weight: 700;">
-            <span>Bachelor of Technology — Computer Science &amp; Engineering (AI &amp; ML)</span>
-            <span>4th Year / Final Year</span>
-          </div>
-          <div style="font-size: 0.9rem; color: #94a3b8; margin-top: 4px;">
-            Brainware University, Kolkata &bull; <strong>CGPA: 8.54 / 10</strong>
-          </div>
-
-          <div class="resume-section-title">Core Competencies</div>
-          <p>
-            <strong>Languages:</strong> Python, JavaScript (ES6+), SQL, HTML5, CSS3.<br>
-            <strong>AI &amp; Machine Learning:</strong> Natural Language Processing (NLP), Transformers, Token Classification, Scikit-Learn, Feature Engineering, Pandas, NumPy.<br>
-            <strong>Web Engineering &amp; Tools:</strong> FastAPI, React.js, REST APIs, Git &amp; GitHub, Docker, Linux, VS Code, CI/CD Workflows.
-          </p>
-
-          <div class="resume-section-title">Key Projects &amp; Contributions</div>
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-weight: 700;">
-              <span>AI Contract Risk Analyzer</span>
-              <span>Python &bull; NLP &bull; FastAPI</span>
-            </div>
-            <p style="font-size: 0.9rem; margin-top: 4px;">
-              Engineered an applied NLP system that parses legal agreements to flag unbounded indemnities, liability vulnerabilities, and high-exposure clauses in real time.
-            </p>
-          </div>
-
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-weight: 700;">
-              <span>InternIntel AI</span>
-              <span>Python &bull; SQL &bull; AI Matching</span>
-            </div>
-            <p style="font-size: 0.9rem; margin-top: 4px;">
-              Designed an intelligent platform to discover, match, and organize internship opportunities with automated applicant compatibility scoring.
-            </p>
-          </div>
-
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-weight: 700;">
-              <span>SentinelAI</span>
-              <span>Python &bull; Telemetry &bull; Docker</span>
-            </div>
-            <p style="font-size: 0.9rem; margin-top: 4px;">
-              Built an incident intelligence tool that ingests application logs, clusters error traces, and surfaces actionable diagnostic insights.
-            </p>
-          </div>
-
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; font-weight: 700;">
-              <span>Smart Expense Tracker</span>
-              <span>JavaScript &bull; Local Storage &bull; Responsive</span>
-            </div>
-            <p style="font-size: 0.9rem; margin-top: 4px;">
-              Created an offline-first responsive personal finance manager with client-side persistent storage and real-time visualization.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </header>
 
   <!-- ========================================================================
-       AI COPILOT: Interactive In-Browser Assistant
+       HERO SECTION: Clean, Human, Credible
        ======================================================================== -->
-  <div class="ai-copilot-container" id="ai-copilot-container">
-    <!-- Floating Trigger Pill -->
-    <button class="ai-copilot-trigger" id="ai-copilot-trigger" aria-label="Open Kritika AI Copilot">
-      <span class="ai-pulse-dot"></span>
-      <span class="ai-trigger-icon">✨</span>
-      <span class="ai-trigger-text">Ask Kritika AI</span>
-    </button>
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Introduction & Credentials -->
+        <div class="hero-text-content">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>4th-Year Undergraduate &bull; Brainware University (CGPA 8.54) &bull; Kolkata</span>
+          </div>
 
-    <!-- Slide-Out Chat Drawer -->
-    <div class="ai-copilot-drawer" id="ai-copilot-drawer" aria-hidden="true">
-      <div class="ai-drawer-header">
-        <div class="ai-header-info">
-          <div class="ai-avatar-badge">KG</div>
-          <div>
-            <div class="ai-drawer-title">Kritika AI Copilot</div>
-            <div class="ai-drawer-sub">
-              <span class="status-dot" style="width: 6px; height: 6px;"></span>
-              Active &bull; Neural Portfolio Assistant
+          <h1 class="hero-name">Kritika Giri</h1>
+
+          <div class="hero-role-wrapper">
+            <span>Specialized in</span>
+            <span class="typewriter-text" id="typewriter-text">Full Stack Web Development</span>
+          </div>
+
+          <p class="hero-bio">
+            I build responsive <strong>full-stack web applications</strong>, high-performance <strong>backend APIs</strong>, and <strong>applied AI systems</strong>. Combining clean frontend architectures in React with reliable backend services in Python and FastAPI to ship reliable software.
+          </p>
+
+          <!-- Core Skills Tags -->
+          <div class="hero-tech-pills">
+            <span class="hero-tech-tag">React.js</span>
+            <span class="hero-tech-tag">JavaScript (ES6+)</span>
+            <span class="hero-tech-tag">Python</span>
+            <span class="hero-tech-tag">FastAPI</span>
+            <span class="hero-tech-tag">SQL &amp; PostgreSQL</span>
+            <span class="hero-tech-tag">Docker</span>
+            <span class="hero-tech-tag">NLP Transformers</span>
+          </div>
+
+          <!-- Direct Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View Shipped Projects ↓
+            </a>
+            <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer" class="btn btn-live">
+              SentinelAI Live App 🚀
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me ✉️
+            </a>
+          </div>
+
+          <!-- Academic & Career Highlights -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-num">8.54<span>/10</span></div>
+              <div class="stat-label">Academic CGPA</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">4th Year</div>
+              <div class="stat-label">Final Year Student</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">4<span>+</span></div>
+              <div class="stat-label">Shipped Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">2027</div>
+              <div class="stat-label">B.Tech Graduation</div>
             </div>
           </div>
         </div>
-        <button class="ai-drawer-close" id="ai-drawer-close" aria-label="Close Assistant">✕</button>
-      </div>
 
-      <!-- Quick Suggested Prompts -->
-      <div class="ai-suggested-prompts">
-        <button class="ai-prompt-chip" data-prompt="Tell me about SentinelAI and the live app">🚀 SentinelAI Live App</button>
-        <button class="ai-prompt-chip" data-prompt="What is your academic background and CGPA?">🎓 Academic Standing</button>
-        <button class="ai-prompt-chip" data-prompt="What tech stack and frameworks do you use?">🛠️ Technical Stack</button>
-        <button class="ai-prompt-chip" data-prompt="What roles and opportunities are you open to?">💼 Open Roles</button>
-      </div>
+        <!-- Right: Human Spotlight Card -->
+        <div class="hero-spotlight-col">
+          <div class="hero-spotlight-card">
+            <div class="spotlight-portrait-wrap">
+              <img src="assets/images/avatar.jpg" alt="Kritika Giri" loading="eager">
+            </div>
+            <div class="spotlight-card-body">
+              <div class="spotlight-header-meta">
+                <span class="featured-pill-tag">🟢 ACTIVE &bull; OPEN FOR ROLES</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Kolkata, India</span>
+              </div>
+              <h3 class="spotlight-title">Kritika Giri</h3>
+              <p class="spotlight-sub">Full Stack Developer &bull; Brainware University</p>
 
-      <!-- Chat Messages Body -->
-      <div class="ai-chat-body" id="ai-chat-body">
-        <div class="ai-msg ai-msg-bot">
-          <div class="ai-msg-bubble">
-            Hello! I am <strong>Kritika's AI Copilot</strong>. Ask me anything about her projects, live deployments (like <strong>SentinelAI</strong>), technical stack, 4th-year studies at <strong>Brainware University</strong> (CGPA 8.54), or engineering philosophy!
+              <!-- Featured Project Mini-Card -->
+              <div class="spotlight-featured-project">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--accent-primary);">FEATURED PROJECT</span>
+                  <span style="font-size: 0.74rem; color: var(--success-color); font-weight: 600;">● Live on GitHub Pages</span>
+                </div>
+                <div class="featured-proj-title">SentinelAI — Incident Command Center</div>
+                <p class="featured-proj-desc">
+                  Real-time log ingestion, error trace clustering, and deterministic root-cause analysis with failure simulation.
+                </p>
+                <div class="featured-proj-actions">
+                  <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer" class="btn btn-live btn-sm" style="flex: 1;">
+                    Open Live App 🚀
+                  </a>
+                  <a href="https://github.com/Kritzz-23/SentinelAI" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    GitHub ⚡
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <span class="ai-msg-time">Just now</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Chat Input Footer -->
-      <form class="ai-chat-input-wrap" id="ai-chat-form">
-        <input type="text" class="ai-chat-input" id="ai-chat-input" placeholder="Ask about projects, stack, or experience..." autocomplete="off">
-        <button type="submit" class="ai-chat-send-btn" id="ai-chat-send" aria-label="Send Message">
-          <span>➤</span>
-        </button>
-      </form>
+  <!-- ========================================================================
+       ABOUT SECTION: Human Story & Engineering Values
+       ======================================================================== -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Me</span>
+        <h2 class="section-title">My Story &amp; Engineering Philosophy</h2>
+        <p class="section-description">
+          A grounded perspective on building software that solves practical problems with architectural discipline and empathy.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Story Narrative & Education Card -->
+        <div class="about-text-content">
+          <p class="lead-p">
+            I am a Full Stack Developer in my final year of Bachelor of Technology in Computer Science &amp; Engineering (AI &amp; ML) at Brainware University in Kolkata.
+          </p>
+          <p>
+            My journey into software engineering started with a fascination for how code can turn abstract ideas into intuitive tools that people rely on every day. Over the past four years, that curiosity has grown into building production-grade web applications, asynchronous API services, and applied machine learning tools.
+          </p>
+          <p>
+            I believe that great engineering is practical: software should be fast, maintainable, and built with genuine care for the end user. Whether I am building incident triage tools like SentinelAI or legal risk analyzers using NLP, I focus on clean code, testability, and sub-second performance.
+          </p>
+
+          <div class="about-academic-card">
+            <div class="academic-tag-row">
+              <span class="section-badge" style="margin-bottom: 0;">Academic Standing</span>
+              <span style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-primary);">CGPA 8.54 / 10</span>
+            </div>
+            <div class="academic-uni-title">Brainware University, Kolkata</div>
+            <div class="academic-degree-sub">
+              Bachelor of Technology (B.Tech) &bull; Computer Science &amp; Engineering (AI &amp; ML)
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
+              Final-year student specializing in software architecture, database management, API design, and practical machine learning applications.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Core Values -->
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">💻</div>
+            <div>
+              <div class="value-title">Full Stack Web Engineering</div>
+              <div class="value-desc">
+                Building responsive, accessible web applications using React.js and modern ES6+ JavaScript with clean state management and fast rendering.
+              </div>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">⚡</div>
+            <div>
+              <div class="value-title">Scalable APIs &amp; Databases</div>
+              <div class="value-desc">
+                Designing asynchronous REST APIs with Python (FastAPI), structured relational databases (PostgreSQL, SQLite), and clean error handling.
+              </div>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">🧠</div>
+            <div>
+              <div class="value-title">Applied Machine Learning</div>
+              <div class="value-desc">
+                Applying NLP transformers, text tokenization, and anomaly clustering to solve real-world domain problems (like legal contract risk and log telemetry).
+              </div>
+            </div>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">🐳</div>
+            <div>
+              <div class="value-title">DevOps &amp; Reliable Delivery</div>
+              <div class="value-desc">
+                Containerizing applications with Docker, managing Git branching workflows, and setting up automated GitHub Pages and CI/CD pipelines.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROJECTS SECTION: Shipped Software & Live Applications
+       ======================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge">Portfolio</span>
+        <h2 class="section-title">Shipped Projects &amp; Applications</h2>
+        <p class="section-description">
+          A collection of real-world full-stack web applications, incident platforms, and machine learning tools with working live demos and code.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="projects-filter-bar">
+        <button class="filter-pill active" data-filter="all">All Projects</button>
+        <button class="filter-pill" data-filter="fullstack">Full Stack &amp; AI</button>
+        <button class="filter-pill" data-filter="backend">Backend &amp; APIs</button>
+        <button class="filter-pill" data-filter="frontend">Frontend Web</button>
+      </div>
+
+      <!-- Projects Grid (Rendered dynamically by js/main.js) -->
+      <div class="projects-grid" id="projects-container">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       LIVE PLAYGROUND: NLP Contract Risk Analyzer
+       ======================================================================== -->
+  <section class="section section-alt" id="nlp-demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Live System Playground</span>
+        <h2 class="section-title">NLP Contract Risk Analyzer</h2>
+        <p class="section-description">
+          Test an interactive demonstration of my natural language processing pipeline. Select a sample clause or input your own legal text to classify liabilities in real time.
+        </p>
+      </div>
+
+      <div class="nlp-playground-card">
+        <div class="nlp-playground-header">
+          <div style="font-weight: 600; font-size: 0.92rem; color: var(--text-main);">
+            Select a Contract Clause Sample:
+          </div>
+          <div class="nlp-sample-presets">
+            <button class="nlp-preset-btn active" data-sample="indemnity">Unlimited Indemnity</button>
+            <button class="nlp-preset-btn" data-sample="noncompete">Restrictive Non-Compete</button>
+            <button class="nlp-preset-btn" data-sample="confidentiality">Standard Mutual NDA</button>
+          </div>
+        </div>
+
+        <div class="nlp-grid">
+          <!-- Left: Input Area -->
+          <div class="nlp-input-pane">
+            <div class="nlp-label">Contract Clause Text:</div>
+            <textarea class="nlp-textarea" id="nlp-input-text" placeholder="Paste commercial contract text here..."></textarea>
+            <div class="nlp-actions-bar">
+              <button class="btn btn-secondary btn-sm" id="nlp-reset-btn">Reset</button>
+              <button class="btn btn-primary btn-sm" id="nlp-run-btn">Run Risk Analysis ⚡</button>
+            </div>
+          </div>
+
+          <!-- Right: Diagnostic Output -->
+          <div class="nlp-result-pane">
+            <div class="nlp-score-header">
+              <div>
+                <div class="nlp-score-label">Computed Liability Level</div>
+                <div class="nlp-category-pill" id="nlp-risk-pill">CRITICAL RISK</div>
+              </div>
+              <div style="text-align: right;">
+                <div class="nlp-score-label">Risk Index</div>
+                <div class="nlp-score-val" id="nlp-risk-score">94<span style="font-size: 1rem; color: var(--text-muted);">/100</span></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="nlp-label">Detected Risk Category:</div>
+              <div style="font-weight: 600; font-size: 1rem; color: var(--text-main);" id="nlp-category-val">
+                Indemnification &amp; Unlimited Liability
+              </div>
+            </div>
+
+            <div>
+              <div class="nlp-label">Flagged High-Liability Phrases:</div>
+              <div class="nlp-flagged-tokens" id="nlp-tokens-container">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+
+            <div>
+              <div class="nlp-label">Actionable Counter-Clause Runbook:</div>
+              <div class="nlp-remediation-box" id="nlp-remediation-val">
+                Recommended Counter-Clause: Cap liability to fees paid during the preceding 12-month period and restrict indemnification to gross negligence or willful misconduct.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SKILLS SECTION: Technical Competencies
+       ======================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge">Capabilities</span>
+        <h2 class="section-title">Technical Skills &amp; Stack</h2>
+        <p class="section-description">
+          The languages, backend frameworks, databases, and development tooling I use to build robust software.
+        </p>
+      </div>
+
+      <!-- Skills Category Tabs -->
+      <div class="skills-category-tabs">
+        <button class="skill-tab-btn active" data-skill-cat="all">All Skills</button>
+        <button class="skill-tab-btn" data-skill-cat="backend">Backend &amp; AI</button>
+        <button class="skill-tab-btn" data-skill-cat="frontend">Frontend &amp; UI</button>
+        <button class="skill-tab-btn" data-skill-cat="devops">DevOps &amp; Databases</button>
+      </div>
+
+      <!-- Skills Grid (Rendered by js/main.js) -->
+      <div class="skills-grid" id="skills-container">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EDUCATION & TIMELINE
+       ======================================================================== -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge">Education &amp; Journey</span>
+        <h2 class="section-title">Academic Background &amp; Milestones</h2>
+        <p class="section-description">
+          Continuous commitment to engineering principles, academic excellence, and software development.
+        </p>
+      </div>
+
+      <div class="timeline-wrap" id="timeline-container">
+        <!-- Rendered by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT SECTION: Simple & Approachable
+       ======================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contact</span>
+        <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+        <p class="section-description">
+          I am currently open for full-time Full Stack Developer positions, software engineering internships, and collaborative software projects.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Direct Channels -->
+        <div class="contact-info-col">
+          <a href="mailto:girikritika30@gmail.com" class="contact-channel-card" id="copy-email-btn">
+            <div class="contact-channel-icon">✉️</div>
+            <div>
+              <div class="contact-channel-label">Email Address (Click to copy)</div>
+              <div class="contact-channel-val">girikritika30@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="contact-channel-icon">🐙</div>
+            <div>
+              <div class="contact-channel-label">GitHub Profile</div>
+              <div class="contact-channel-val">github.com/Kritzz-23</div>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="contact-channel-icon">💼</div>
+            <div>
+              <div class="contact-channel-label">LinkedIn Profile</div>
+              <div class="contact-channel-val">linkedin.com/in/kritika-giri-2320aa345</div>
+            </div>
+          </a>
+
+          <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="contact-channel-icon">🚀</div>
+            <div>
+              <div class="contact-channel-label">SentinelAI Live Application</div>
+              <div class="contact-channel-val">kritzz-23.github.io/SentinelAI/</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right: Message Form -->
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message or Inquiry</label>
+              <textarea id="contact-message" class="form-input" placeholder="Tell me about the role, project, or collaboration..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message ✉️
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <span>&copy; 2026 Kritika Giri &bull; Full Stack Developer</span>
+        <span style="margin: 0 8px; color: var(--border-medium);">|</span>
+        <span>Brainware University, Kolkata (CGPA 8.54)</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/Kritzz-23" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/kritika-giri-2320aa345/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://kritzz-23.github.io/SentinelAI/" target="_blank" rel="noopener noreferrer">SentinelAI</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="modal-body-content">
+        <!-- Injected dynamically -->
+      </div>
     </div>
   </div>
 
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toast-notification">Email copied to clipboard!</div>
+
+  <!-- Data Hub and Logic Script -->
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
